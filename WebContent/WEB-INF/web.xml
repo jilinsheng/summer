@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<description>吉林省农村救助信息管理系统</description>
+	<display-name>吉林省农村救助信息管理系统</display-name>
+	<icon>
+		<small-icon>/WebContent/images/favicon.ico</small-icon>
+		<large-icon>/WebContent/images/favicon.ico</large-icon>
+	</icon>
+	<filter>
+		<filter-name>encodingfilter</filter-name>
+		<filter-class>com.mingda.common.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>first</filter-name>
+		<filter-class>com.mingda.common.filter.FirstFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>encodingfilterjq</filter-name>
+		<filter-class>com.mingda.common.filter.EncodingFilterJQ</filter-class>
+	</filter>
+	<filter>
+		<filter-name>CardToHtml</filter-name>
+		<filter-class>com.mingda.common.filter.CardStatFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingfilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>first</filter-name>
+		<url-pattern>/page/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingfilterjq</filter-name>
+		<url-pattern>/page/policy/manage/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CardToHtml</filter-name>
+		<url-pattern>/page/info/neweditor/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>com.mingda.common.listener.SessionListener</listener-class>
+	</listener><!--
+	<servlet>
+		<servlet-name>reportservices</servlet-name>
+		<servlet-class>com.syssoft.report.SysReportServices</servlet-class>
+		<init-param>
+			<param-name>maxreportconfig</param-name>
+			<param-value>/WEB-INF/classes/sys_report.properties</param-value>
+		</init-param>
+		<init-param>
+			<param-name>maxprojectsconfig</param-name>
+			<param-value>/WEB-INF/classes/maxreportprojects.xml</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>reportsubmitdata</servlet-name>
+		<servlet-class>com.syssoft.report.SysReportSubmitServices</servlet-class>
+	</servlet>
+	--><servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml,/WEB-INF/struts-config-xiu.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Log4jServlet</servlet-name>
+		<servlet-class>com.mingda.common.log4j.Log4jServlet</servlet-class>
+		<init-param>
+			<param-name>log4j</param-name>
+			<param-value>WEB-INF/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+	<!--<servlet>
+		<servlet-name>ServletConfigurator</servlet-name>
+		<servlet-class>
+			org.logicalcobwebs.proxool.configuration.ServletConfigurator</servlet-class>
+		<init-param>
+			<param-name>xmlFile</param-name>
+			<param-value>WEB-INF/proxool.xml</param-value>
+		</init-param>
+		<load-on-startup>8</load-on-startup>
+	</servlet>
+	--><servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>FamiyInitServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.FamilyInitServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>FamilySaveServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.FamilySaveServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DeptTreeServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.search.DeptTreeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>TableInfoServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.search.TableInfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>TableTreeServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.search.TableTreeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DiscTreeServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.search.DiscTreeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MemberInitServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.MemberInitServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MemberSaveServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.MemberSaveServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>FamilyChildInitServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.FamilyChildInitServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>FamilyChildSaveServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.FamilyChildSaveServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>PolicyManageServlet</servlet-name>
+		<servlet-class>com.mingda.action.policy.manage.PolicyManageServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>FamilyChildGetChildServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.FamilyChildGetChildServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>FamilyChildGetFormServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.FamilyChildGetFormServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MemberChildGetChildServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.MemberChildGetChildServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MemberChildGetFormServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.MemberChildGetFormServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MemberChildInitServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.MemberChildInitServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MemberChildSaveServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.MemberChildSaveServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>FamilyClassInitServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.FamilyClassInitServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>MemberListServlet</servlet-name>
+		<servlet-class>com.mingda.action.info.MemberListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>QueryManageServlet</servlet-name>
+		<servlet-class>com.mingda.action.querymanage.QueryManageServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>PolicyQueryServlet</servlet-name>
+		<servlet-class>com.mingda.action.policy.query.PolicyQueryServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ClassCommit</servlet-name>
+		<servlet-class>com.mingda.action.info.ClassCommit</servlet-class>
+	</servlet>
+	<!--<servlet-mapping>
+		<servlet-name>reportservices</servlet-name>
+		<url-pattern>/reportservices/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>reportsubmitdata</servlet-name>
+		<url-pattern>/reportsubmitdata/*</url-pattern>
+	</servlet-mapping>
+	--><servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Log4jServlet</servlet-name>
+		<url-pattern>/page/common/Log4jServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FamiyInitServlet</servlet-name>
+		<url-pattern>/page/info/family/FamiyInitServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FamilySaveServlet</servlet-name>
+		<url-pattern>/page/info/family/FamilySaveServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeptTreeServlet</servlet-name>
+		<url-pattern>/page/info/search/DeptTreeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TableInfoServlet</servlet-name>
+		<url-pattern>/page/info/search/TableInfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TableTreeServlet</servlet-name>
+		<url-pattern>/page/info/search/TableTreeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DiscTreeServlet</servlet-name>
+		<url-pattern>/page/info/search/DiscTreeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberInitServlet</servlet-name>
+		<url-pattern>/page/info/member/MemberInitServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberSaveServlet</servlet-name>
+		<url-pattern>/page/info/member/MemberSaveServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FamilyChildInitServlet</servlet-name>
+		<url-pattern>/page/info/familychild/FamilyChildInitServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FamilyChildSaveServlet</servlet-name>
+		<url-pattern>/page/info/familychild/FamilyChildSaveServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PolicyManageServlet</servlet-name>
+		<url-pattern>/page/policy/manage/PolicyManageServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FamilyChildGetChildServlet</servlet-name>
+		<url-pattern>/page/info/familychild/FamilyChildGetChildServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FamilyChildGetFormServlet</servlet-name>
+		<url-pattern>/page/info/familychild/FamilyChildGetFormServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberChildGetChildServlet</servlet-name>
+		<url-pattern>/page/info/memberchild/MemberChildGetChildServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberChildGetFormServlet</servlet-name>
+		<url-pattern>/page/info/memberchild/MemberChildGetFormServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberChildInitServlet</servlet-name>
+		<url-pattern>/page/info/memberchild/MemberChildInitServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberChildSaveServlet</servlet-name>
+		<url-pattern>/page/info/memberchild/MemberChildSaveServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FamilyClassInitServlet</servlet-name>
+		<url-pattern>/page/info/familyclass/FamilyClassInitServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberListServlet</servlet-name>
+		<url-pattern>/page/info/member/MemberListServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>QueryManageServlet</servlet-name>
+		<url-pattern>/page/querymanage/QueryManageServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PolicyQueryServlet</servlet-name>
+		<url-pattern>/page/policy/query/PolicyQueryServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ClassCommit</servlet-name>
+		<url-pattern>/page/info/familyclass/ClassCommit</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>600</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+</web-app>

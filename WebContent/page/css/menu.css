@@ -1,0 +1,59 @@
+@CHARSET "GB18030";
+
+/*菜单页全局样式*/
+body {
+	background-color: #D9EEFF;
+	padding: 0;
+	margin: 0px;
+	font-size: 12px;
+	line-height: 1.7;
+	font-family: Verdana, "宋体", Arial;
+	list-style: none;
+}
+
+/*定义链接的样式*/
+a {
+	display: block;
+	border-bottom: 1px solid #fff;
+	width: 146px;
+	padding-top: 2px;
+	padding-left: 23px;
+}
+
+a:link,a:visited {
+	color: #000000;
+	text-decoration: none;
+	background: #88CBFF url(images/point.gif) no-repeat 9px center;
+	height: 22px;
+}
+
+a:hover,a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #35A9FF url(images/arrow.gif) no-repeat 9px center;
+	height: 22px;
+}
+
+/*定义了UL*/
+ul {
+	background: #fff;
+	width: 146px;
+	padding: 0px;
+	margin: 0px;
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: #0295FF;
+}
+
+span {
+	width: 148px;
+	height: 22px;
+	display: block;
+	background: #006FC0;
+	padding-top: 2px;
+	padding-left: 0px;
+	color: #FFFFFF;
+	font-weight: 600;
+	text-align: center;
+	border-bottom: 1px solid #0295FF;
+}

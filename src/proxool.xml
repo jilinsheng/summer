@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<something-else-entirely>
+	<proxool>
+		<alias>proxool</alias>
+		<!--<driver-url>jdbc:oracle:thin:@(description=(ADDRESS_LIST=(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.33)(PORT = 1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.34)(PORT = 1521))(load_balance=yes)(failover=yes))(connect_data=(service_name= ncdb)(instance_name=ncdb1)(instance_name=ncdb2)))
+		</driver-url>
+		-->
+			<driver-url>jdbc:oracle:thin:@10.1.0.31:1521:ncdb1</driver-url>
+		<driver-class>oracle.jdbc.OracleDriver
+		</driver-class>
+		<driver-properties>
+			<property name="user" value="summer" />
+			<property name="password" value="summer" />
+		</driver-properties>
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+		<proxool.simultaneous-build-throttle>20
+		</proxool.simultaneous-build-throttle>
+		<prototype-count>5</prototype-count>
+		<maximum-connection-count>100</maximum-connection-count>
+		<minimum-connection-count>10</minimum-connection-count>
+	</proxool>
+</something-else-entirely>  

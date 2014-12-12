@@ -1,0 +1,179 @@
+/** 页面样式 **/
+body {
+	margin: 3;
+	margin-top: 0;
+	padding: 0;
+	background: #DEEFFF;
+	font-family: "宋体";
+	font-size: 12px;
+}
+/** caption样式 **/
+.caption {
+	color: #660099;
+	font-family: "宋体";
+	font-size: 12px;
+}
+/* 列表整体样式 */
+#arrangableNodes {
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+/* 列表项样式 */
+#arrangableNodes li {
+	list-style-type: none;
+	cursor: default;
+}
+.itemstyle {
+	font-size: 12px;
+	color: #6BA6FF;
+}
+.licss {
+	border-top: 1px solid buttonhighlight; 
+	border-left: 1px solid buttonhighlight;  
+	border-bottom: 1px solid buttonshadow;  
+	border-right: 1px solid buttonshadow; 
+	padding: 0;  
+	cursor: hand;			  			
+}	
+/** 列表选择框样式 **/
+.lists {
+	width: 100%; 
+	font-family: "宋体";
+	font-size: 12px;
+}
+/** 列表显示框样式 **/
+.listborder {
+	border-top: 1px solid buttonhighlight; 
+	border-left: 1px solid buttonhighlight;  
+	border-bottom: 1px solid buttonshadow;  
+	border-right: 1px solid buttonshadow; 
+	padding: 0;  
+	cursor: hand;			  			
+}
+/**空表格样式**/
+.table {
+	border-collapse: collapse;
+	background: #DEEFFF;
+	width: 100%; 
+	border: "0";
+	cellspacing: "0";
+	cellpadding: "0";
+	font-size: 12px;
+}
+/** 信息树表结构的样式 **/
+.sqltable{
+	color: #6BA6FF;
+	font-family: "宋体";
+	font-size:12px;
+}
+/** 条件文本框的样式 **/
+#sqlwhere{
+	border-top:1px solid #43ACB2;
+	border-left:1px solid #43ACB2;
+	border-bottom:1px solid #43ACB2;
+	border-right:1px solid #43ACB2;
+	width:100%;
+	font-size:12px;
+}
+/** 信息树的样式 **/
+#infotree{
+	border-top:1px solid #43ACB2;
+	border-left:1px solid #43ACB2;
+	border-bottom:1px solid #43ACB2;
+	border-right:1px solid #43ACB2;
+	width:100%;
+	height:125px; 
+	overflow:scroll;
+	font-size:12px;
+}
+/** 运算符的样式 **/
+#sqlsexp{
+	width:100%;
+	font-size:12px;
+}
+/** 测试结果的样式 **/
+#resultdiv{
+	position:absolute;
+	left:5%; 
+	top:10%;
+	z-index:2;
+	background-color: #FFCCCC;
+	color: #FF0099;
+	font-size:12px;
+	display:none;
+}
+#pagestatusdiv{
+	position:absolute;
+	left:60%; 
+	top:30%;			
+	z-index:2;
+	background-color: #FFCCCC;
+	font-weight: bold;
+	color: #FF0099;
+	font-size:14px;
+	display:none;
+}
+/** 业务列表框样式 **/
+#policylists{
+	border-top:1px solid #43ACB2;
+	border-left:1px solid #43ACB2;
+	border-bottom:1px solid #43ACB2;
+	border-right:1px solid #43ACB2;
+	width:100%;
+	height:204px; 
+	overflow:scroll;
+	font-size:12px;
+}
+/** 档次列表框样式 **/
+#standardlists{
+	border-top:1px solid #43ACB2;
+	border-left:1px solid #43ACB2;
+	border-bottom:1px solid #43ACB2;
+	border-right:1px solid #43ACB2;
+	width:100%;
+	height:275px; 
+	overflow:scroll;
+	font-size:12px;
+}
+/** 机构列表框样式 **/
+#deptlists{
+	border-top:1px solid #43ACB2;
+	border-left:1px solid #43ACB2;
+	border-bottom:1px solid #43ACB2;
+	border-right:1px solid #43ACB2;
+	width:100%;
+	height:150px; 
+	overflow:scroll;
+	font-size:12px;
+}
+/** 属性详细描述样式 **/
+#itemdesc{
+	border-top:1px solid #43ACB2;
+	border-left:1px solid #43ACB2;
+	border-bottom:1px solid #43ACB2;
+	border-right:1px solid #43ACB2;
+	width:100%;
+	font-size:12px;
+}
+/** 状态样式 **/
+.status0 {	
+	text-decoration:line-through;
+	color:#999;
+}
+/** 鼠标连接样式 **/
+.pointer {
+	cursor:pointer;
+}
+/** 连接样式 **/
+.operation {
+	font-size:12px;			
+	color:#3366CC;
+}
+/** 文字标签样式 **/
+.titles{
+	background:#A5E6FE;
+	color: #660099;
+	font-size:12px;
+}

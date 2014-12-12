@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="InfoTPayout" >
+  <resultMap id="InfoTPayoutResult" class="com.mingda.common.ibatis.data.InfoTPayout" >
+    <result column="PAYOUT_ID" property="payoutId"/>
+    <result column="FAMILY_ID" property="familyId"/>
+    <result column="PAYOUT1" property="payout1"/>
+    <result column="PAYOUT2" property="payout2"/>
+    <result column="PAYOUT3" property="payout3"/>
+    <result column="PAYOUT4" property="payout4"/>
+    <result column="PAYOUT5" property="payout5"/>
+    <result column="PAYOUT6" property="payout6"/>
+    <result column="PAYOUT7" property="payout7"/>
+    <result column="PAYOUT8" property="payout8"/>
+    <result column="PAYOUT9" property="payout9"/>
+  </resultMap>
+   <select id="selectPayoutByPrimaryKey" resultMap="InfoTPayoutResult" parameterClass="com.mingda.common.ibatis.data.InfoTPayout" >
+    select PAYOUT_ID, FAMILY_ID, PAYOUT1, PAYOUT2, PAYOUT3, PAYOUT4, PAYOUT5, PAYOUT6, PAYOUT7,
+      PAYOUT8, PAYOUT9
+    from INFO_T_PAYOUT
+    where PAYOUT_ID = #payoutId#
+  </select>
+  <select id="selectPayoutByFamilyId" resultMap="InfoTPayoutResult" parameterClass="com.mingda.common.ibatis.data.InfoTPayout" >
+    select PAYOUT_ID, FAMILY_ID, PAYOUT1, PAYOUT2, PAYOUT3, PAYOUT4, PAYOUT5, PAYOUT6, PAYOUT7,
+      PAYOUT8, PAYOUT9
+    from INFO_T_PAYOUT
+    where FAMILY_ID = #familyId#
+  </select>
+   <insert id="insertPayout" parameterClass="com.mingda.common.ibatis.data.InfoTPayout" >
+    <!-- <selectKey resultClass="java.lang.Integer" keyProperty="payoutId" type="pre">
+			SELECT hibernate_sequence.nextval AS payoutId FROM DUAL
+		</selectKey>-->
+    insert into INFO_T_PAYOUT (PAYOUT_ID, FAMILY_ID, PAYOUT1, PAYOUT2, PAYOUT3, PAYOUT4,
+      PAYOUT5, PAYOUT6, PAYOUT7, PAYOUT8, PAYOUT9)
+    values (hibernate_sequence.nextval, #familyId#, #payout1#, #payout2#,
+      #payout3#, #payout4#, #payout5#, #payout6#, #payout7#,
+      #payout8#, #payout9#)
+  </insert>
+  <update id="updatePayoutByPrimaryKey" parameterClass="com.mingda.common.ibatis.data.InfoTPayout" >
+    update INFO_T_PAYOUT
+    set FAMILY_ID = #familyId#,
+      PAYOUT1 = #payout1#,
+      PAYOUT2 = #payout2#,
+      PAYOUT3 = #payout3#,
+      PAYOUT4 = #payout4#,
+      PAYOUT5 = #payout5#,
+      PAYOUT6 = #payout6#,
+      PAYOUT7 = #payout7#,
+      PAYOUT8 = #payout8#,
+      PAYOUT9 = #payout9#
+    where PAYOUT_ID = #payoutId#
+  </update>
+  <update id="updatePayoutByPrimaryKeySelective" parameterClass="com.mingda.common.ibatis.data.InfoTPayout" >
+    update INFO_T_PAYOUT
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="familyId" >
+        FAMILY_ID = #familyId:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout1" >
+        PAYOUT1 = #payout1:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout2" >
+        PAYOUT2 = #payout2:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout3" >
+        PAYOUT3 = #payout3:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout4" >
+        PAYOUT4 = #payout4:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout5" >
+        PAYOUT5 = #payout5:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout6" >
+        PAYOUT6 = #payout6:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout7" >
+        PAYOUT7 = #payout7:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout8" >
+        PAYOUT8 = #payout8:DECIMAL#
+      </isNotNull>
+      <isNotNull prepend="," property="payout9" >
+        PAYOUT9 = #payout9:DECIMAL#
+      </isNotNull>
+    </dynamic>
+    where PAYOUT_ID = #payoutId:DECIMAL#
+  </update>
+</sqlMap>

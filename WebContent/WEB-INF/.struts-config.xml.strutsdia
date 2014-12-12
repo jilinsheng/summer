@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="error" NAME="forward0" PATH="/page/common/error.jsp"
+  SHAPE="32,17,0,0" TARGET="page0" TITLE="error" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#oa#noticeview" NAME="action0"
+  PATH="/page/oa/noticeview" SHAPE="32,273,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticeview" NAME="forward0"
+   PATH="/page/oa/noticeview.jsp" TARGET="page1" TITLE="noticeview"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#roleinit" NAME="action1"
+  PATH="/page/system/roleinit" SHAPE="32,497,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="roleright" NAME="forward0"
+   PATH="/page/system/rolemain.jsp" TARGET="page2" TITLE="roleright"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#querypolicybymonth" NAME="action2"
+  PATH="/page/implemention/querypolicybymonth" SHAPE="32,609,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="querypolicybymonth" NAME="forward0"
+   PATH="/page/implemention/querypolicybymonth.jsp" TARGET="page3"
+   TITLE="querypolicybymonth" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#getChilds" NAME="action3"
+  PATH="/page/oa/getChilds" SHAPE="448,13489,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#personinfoinit" NAME="action4"
+  PATH="/page/system/personinfoinit" SHAPE="32,721,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="personinfo" NAME="forward0"
+   PATH="/page/system/personinfo.jsp" TARGET="page4" TITLE="personinfo"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#menu#menutree" NAME="action5"
+  PATH="/page/system/menu/menutree" SHAPE="32,833,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="menutree" NAME="forward0"
+   PATH="/page/system/menu/menutree.jsp" TARGET="page5" TITLE="menutree"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#query#noticePolicyQuery" NAME="action6"
+  PATH="/page/policy/query/noticePolicyQuery" SHAPE="32,945,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticepolicyquery" NAME="forward0"
+   PATH="/page/policy/query/noticepolicyquery.jsp" TARGET="page6"
+   TITLE="noticepolicyquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#infoFormSave" NAME="action7"
+  PATH="/page/info/editor/infoFormSave" SHAPE="32,1169,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="familyinfocard" NAME="forward0"
+   PATH="/page/info/card/familyinfocard.do" TARGET="action51"
+   TITLE="familyinfocard" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#querymanage#infoqueryresult" NAME="action8"
+  PATH="/page/querymanage/infoqueryresult" SHAPE="32,1281,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="infoqueryresult" NAME="forward0"
+   PATH="/page/querymanage/infoqueryresult.jsp" TARGET="page7"
+   TITLE="infoqueryresult" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#billctreatfilepriview"
+  NAME="action9" PATH="/page/implemention/billctreatfilepriview"
+  SHAPE="32,1393,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="billcreatefilepriview" NAME="forward0"
+   PATH="/page/implemention/billcreatefilepriview.jsp" TARGET="page8"
+   TITLE="billcreatefilepriview" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#noticebrowser" NAME="action10"
+  PATH="/page/oa/noticebrowser" SHAPE="32,1505,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticebrowser" NAME="forward0"
+   PATH="/page/oa/noticebrowser.jsp" TARGET="page9"
+   TITLE="noticebrowser" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#move#moveinternal" NAME="action11"
+  PATH="/page/info/move/moveinternal" SHAPE="32,1617,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="moveinternal" NAME="forward0"
+   PATH="/page/info/move/moveinternal.jsp" TARGET="page10"
+   TITLE="moveinternal" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#paperprint#paperprintredo" NAME="action12"
+  PATH="/page/paperprint/paperprintredo" SHAPE="32,1841,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="paperprintredo" NAME="forward0"
+   PATH="/page/paperprint/paperprintredo.jsp" TARGET="page11"
+   TITLE="paperprintredo" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#synthesis#residentquery" NAME="action13"
+  PATH="/page/info/synthesis/residentquery" SHAPE="32,1953,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="residentquery" NAME="forward0"
+   PATH="/page/info/synthesis/residentquery.jsp" TARGET="page12"
+   TITLE="residentquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#memberbaseinit" NAME="action14"
+  PATH="/page/info/neweditor/memberbaseinit" SHAPE="32,2065,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="memberbase" NAME="forward0"
+   PATH="/page/info/neweditor/memberbase.jsp" TARGET="page13"
+   TITLE="memberbase" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#announcmentbrowser" NAME="action15"
+  PATH="/page/oa/announcmentbrowser" SHAPE="32,2177,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="announcementbrowser" NAME="forward0"
+   PATH="/page/oa/announcementbrowser.jsp" TARGET="page14"
+   TITLE="announcementbrowser" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#viewpic" NAME="action16" PATH="/viewpic"
+  SHAPE="32,2289,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="viewpic" NAME="forward0"
+   PATH="/page/info/viewpic.jsp" TARGET="page15" TITLE="viewpic"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#query#queryPolicyFamily" NAME="action17"
+  PATH="/page/policy/query/queryPolicyFamily" SHAPE="32,2401,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="querypolicyfamily" NAME="forward0"
+   PATH="/page/policy/query/querypolicyfamily.jsp" TARGET="page16"
+   TITLE="querypolicyfamily" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#query#noticePolicyQueryInit"
+  NAME="action18" PATH="/page/policy/query/noticePolicyQueryInit"
+  SHAPE="32,1057,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticepolicyquery" NAME="forward0"
+   PATH="/page/policy/query/noticepolicyquery.jsp" TARGET="page6"
+   TITLE="noticepolicyquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#rolesave" NAME="action19"
+  PATH="/page/system/rolesave" SHAPE="656,13505,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#familybaseinit" NAME="action20"
+  PATH="/page/info/neweditor/familybaseinit" SHAPE="32,2625,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="familybase" NAME="forward0"
+   PATH="/page/info/neweditor/familybase.jsp" TARGET="page17"
+   TITLE="familybase" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#uploadinit" NAME="action21"
+  PATH="/page/info/editor/uploadinit" SHAPE="32,2737,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="upload" NAME="forward0"
+   PATH="/page/info/editor/upload.jsp" TARGET="page18" TITLE="upload"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#getMemberBase" NAME="action22"
+  PATH="/page/info/card/getMemberBase" SHAPE="864,13489,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#editor#editorquery" NAME="action23"
+  PATH="/page/info/editor/editorquery" SHAPE="32,2849,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="familysave" NAME="forward0"
+   PATH="/page/info/editor/addFamilyBase.do" TARGET="action25"
+   TITLE="familysave" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="familylist" NAME="forward1"
+   PATH="/page/info/editor/familylist.jsp" TARGET="page19"
+   TITLE="familylist" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#billcreatefileview"
+  NAME="action24" PATH="/page/implemention/billcreatefileview"
+  SHAPE="32,3105,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="billcreatefile" NAME="forward0"
+   PATH="/page/implemention/billcreatefile.jsp" TARGET="page20"
+   TITLE="billcreatefile" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#addFamilyBase" NAME="action25"
+  PATH="/page/info/editor/addFamilyBase" SHAPE="256,2865,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="familysave" NAME="forward0"
+   PATH="/page/info/editor/familysave.jsp" TARGET="page21"
+   TITLE="familysave" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#demurral#demurralview" NAME="action26"
+  PATH="/page/policy/demurral/demurralview" SHAPE="32,3217,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="demurralview" NAME="forward0"
+   PATH="/page/policy/demurral/demurralview.jsp" TARGET="page22"
+   TITLE="demurralview" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#readMenu" NAME="action27" PATH="/page/readMenu"
+  SHAPE="32,3553,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="menud" NAME="forward0" PATH="/page/menud.jsp"
+   TARGET="page23" TITLE="menud" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="menutree" NAME="forward1"
+   PATH="/page/menutree.jsp" TARGET="page24" TITLE="menutree"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="menunew" NAME="forward2"
+   PATH="/page/menunew.jsp" TARGET="page25" TITLE="menunew"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#newchildlist" NAME="action28"
+  PATH="/page/info/card/newchildlist" SHAPE="32,3953,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="newchildlist" NAME="forward0"
+   PATH="/page/info/card/newchildlist.jsp" TARGET="page26"
+   TITLE="newchildlist" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#menu#menuchildsave" NAME="action29"
+  PATH="/page/system/menu/menuchildsave" SHAPE="1072,13505,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#oa#transferbrowser" NAME="action30"
+  PATH="/page/oa/transferbrowser" SHAPE="32,4065,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="transferbrowser" NAME="forward0"
+   PATH="/page/oa/transferbrowser.jsp" TARGET="page27"
+   TITLE="transferbrowser" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#familybasesave" NAME="action31"
+  PATH="/page/info/neweditor/familybasesave" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#familyclass" NAME="action32"
+  PATH="/page/info/neweditor/familyclass" SHAPE="32,4177,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="familysort" NAME="forward0"
+   PATH="/page/info/neweditor/familysort.jsp" TARGET="page28"
+   TITLE="familysort" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#move#readnextorg" NAME="action33"
+  PATH="/page/info/move/readnextorg" SHAPE="448,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#refclasssave" NAME="action34"
+  PATH="/page/system/refclasssave" SHAPE="32,4289,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="refclassinit" NAME="forward0"
+   PATH="/page/system/refclassinit.do" TARGET="action93"
+   TITLE="refclassinit" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#view" NAME="action35"
+  PATH="/page/info/card/view" SHAPE="32,4401,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="view" NAME="forward0"
+   PATH="/page/info/card/view.jsp" TARGET="page29" TITLE="view"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#transferquery" NAME="action36"
+  PATH="/page/oa/transferquery" SHAPE="32,4513,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="transferquery" NAME="forward0"
+   PATH="/page/oa/transferquery.jsp" TARGET="page30"
+   TITLE="transferquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#noticemanage" NAME="action37"
+  PATH="/page/oa/noticemanage" SHAPE="656,13617,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#editor#infoFormInit" NAME="action38"
+  PATH="/page/info/editor/infoFormInit" SHAPE="32,4625,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="infoeditor" NAME="forward0"
+   PATH="/page/info/editor/infoeditor.jsp" TARGET="page31"
+   TITLE="infoeditor" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#organsave" NAME="action39"
+  PATH="/page/organ/organsave" SHAPE="32,4737,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward0"
+   PATH="/page/organ/error.jsp" TARGET="page32" TITLE="error"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#annexsave" NAME="action40"
+  PATH="/page/info/neweditor/annexsave" SHAPE="864,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#oa#announcementview" NAME="action41"
+  PATH="/page/oa/announcementview" SHAPE="1072,13617,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#move#moveexternalin" NAME="action42"
+  PATH="/page/info/move/moveexternalin" SHAPE="32,5105,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="moveexternalin" NAME="forward0"
+   PATH="/page/info/move/moveexternalin.jsp" TARGET="page33"
+   TITLE="moveexternalin" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#roleonesave" NAME="action43"
+  PATH="/page/system/roleonesave" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#implemention#billcreateinit" NAME="action44"
+  PATH="/page/implemention/billcreateinit" SHAPE="256,145,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="billcreate" NAME="forward0"
+   PATH="/page/implemention/billcreate.jsp" TARGET="page34"
+   TITLE="billcreate" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#noticemanagequery" NAME="action45"
+  PATH="/page/oa/noticemanagequery" SHAPE="32,5329,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticemanagequery" NAME="forward0"
+   PATH="/page/oa/noticemanagequery.jsp" TARGET="page35"
+   TITLE="noticemanagequery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#report#jasper" NAME="action46"
+  PATH="/page/report/jasper" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#assetinit" NAME="action47"
+  PATH="/page/info/neweditor/assetinit" SHAPE="32,5441,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="asset" NAME="forward0"
+   PATH="/page/info/neweditor/asset.jsp" TARGET="page36" TITLE="asset"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#refreshClass" NAME="action48"
+  PATH="/page/info/editor/refreshClass" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#incomeinit" NAME="action49"
+  PATH="/page/info/neweditor/incomeinit" SHAPE="32,5553,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="income" NAME="forward0"
+   PATH="/page/info/neweditor/income.jsp" TARGET="page37" TITLE="income"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#editorGetNodeList" NAME="action50"
+  PATH="/page/info/editor/editorGetNodeList" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#familyinfocard" NAME="action51"
+  PATH="/page/info/card/familyinfocard" SHAPE="240,1185,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="familyinfocard" NAME="forward0"
+   PATH="/page/info/card/familyinfocard.jsp" TARGET="page38"
+   TITLE="familyinfocard" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#editorInfoCardTrees"
+  NAME="action52" PATH="/page/info/editor/editorInfoCardTrees"
+  SHAPE="32,5665,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="editorFrameset" NAME="forward0"
+   PATH="/page/info/editor/editorFrameset.jsp" TARGET="page39"
+   TITLE="editorFrameset" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#editormenu" NAME="action53"
+  PATH="/page/info/neweditor/editormenu" SHAPE="32,5777,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="editormenu" NAME="forward0"
+   PATH="/page/info/neweditor/editormenu.jsp" TARGET="page40"
+   TITLE="editormenu" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#infoinit" NAME="action54"
+  PATH="/page/info/infoinit" SHAPE="32,5889,0,0" TITLE="familyQueryForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="familyinfo" NAME="forward0"
+   PATH="/page/info/familyinfo.jsp" TARGET="page41" TITLE="familyinfo"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#employeeinit" NAME="action55"
+  PATH="/page/system/employeeinit" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#organ#organeditundoinit" NAME="action56"
+  PATH="/page/organ/organeditundoinit" SHAPE="32,6001,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="organeditcommit" NAME="forward0"
+   PATH="/page/organ/organeditcommit.jsp" TARGET="page42"
+   TITLE="organeditcommit" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="organundoedit" NAME="forward1"
+   PATH="/page/organ/organundoedit.jsp" TARGET="page43"
+   TITLE="organundoedit" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#rolelist" NAME="action57"
+  PATH="/page/system/rolelist" SHAPE="32,6257,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="role" NAME="forward0"
+   PATH="/page/system/role.jsp" TARGET="page44" TITLE="role"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#paperprint#printpaperbrowse" NAME="action58"
+  PATH="/page/paperprint/printpaperbrowse" SHAPE="32,6369,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="paperprintbrowse" NAME="forward0"
+   PATH="/page/paperprint/paperprintbrowse.jsp" TARGET="page45"
+   TITLE="paperprintbrowse" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#syslog#syslogtable" NAME="action59"
+  PATH="/page/system/syslog/syslogtable" SHAPE="32,6481,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="syslogtable" NAME="forward0"
+   PATH="/page/system/syslog/syslogtable.jsp" TARGET="page46"
+   TITLE="syslogtable" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#organamalgamateinit" NAME="action60"
+  PATH="/page/organ/organamalgamateinit" SHAPE="32,6593,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="organamalgamate" NAME="forward0"
+   PATH="/page/organ/organamalgamate.jsp" TARGET="page47"
+   TITLE="organamalgamate" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#personinfo" NAME="action61"
+  PATH="/page/system/personinfo" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="personinfoinit" NAME="forward0"
+   PATH="/page/system/personinfo.do" TARGET="action61"
+   TITLE="personinfoinit" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#login" NAME="action62" PATH="/login"
+  SHAPE="32,6705,0,0" TITLE="loginForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="index" NAME="forward0" PATH="/page/index.jsp"
+   TARGET="page48" TITLE="index" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="login" NAME="forward1" PATH="/login.jsp"
+   TARGET="page49" TITLE="login" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#organfindbylevel" NAME="action63"
+  PATH="/page/organ/organfindbylevel" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#assetsave" NAME="action64"
+  PATH="/page/info/neweditor/assetsave" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#oa#recpit" NAME="action65"
+  PATH="/page/oa/recpit" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#mainmenu" NAME="action66" PATH="/page/mainmenu"
+  SHAPE="32,6961,0,0" SUBTYPE="parameter" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action66" PATH="mainmenu" TARGET="page50"
+   TITLE="parameter" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#transferrecequery" NAME="action67"
+  PATH="/page/oa/transferrecequery" SHAPE="32,7073,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="transferrecequery" NAME="forward0"
+   PATH="/page/oa/transferrecequery.jsp" TARGET="page51"
+   TITLE="transferrecequery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#alteration#changemaster" NAME="action68"
+  PATH="/page/info/alteration/changemaster" SHAPE="32,7185,0,0"
+  TITLE="changemasterForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="changemasterresult" NAME="forward0"
+   PATH="/page/info/alteration/changemasterresult.jsp" TARGET="page52"
+   TITLE="changemasterresult" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#undo#moveoutundo" NAME="action69"
+  PATH="/page/info/undo/moveoutundo" SHAPE="32,7297,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="moveoutundo" NAME="forward0"
+   PATH="/page/info/undo/moveoutundo.jsp" TARGET="page53"
+   TITLE="moveoutundo" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#synthesis#findtablechild" NAME="action70"
+  PATH="/page/info/synthesis/findtablechild" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#synthesis#residentdict" NAME="action71"
+  PATH="/page/info/synthesis/residentdict" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#implemention#interfacedefineinit"
+  NAME="action72" PATH="/page/implemention/interfacedefineinit"
+  SHAPE="32,7409,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="interfacedefine" NAME="forward0"
+   PATH="/page/implemention/interfacedefine.jsp" TARGET="page54"
+   TITLE="interfacedefine" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#upload" NAME="action73"
+  PATH="/page/info/editor/upload" SHAPE="32,7521,0,0" TITLE="uploadForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="result" NAME="forward0"
+   PATH="/page/info/editor/result.jsp" TARGET="page55" TITLE="result"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#infovalidate#infovalidatequery" NAME="action74"
+  PATH="/page/infovalidate/infovalidatequery" SHAPE="32,7633,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="infovalidatequery" NAME="forward0"
+   PATH="/page/infovalidate/infovalidatequery.jsp" TARGET="page56"
+   TITLE="infovalidatequery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#move#moveinternalinit" NAME="action75"
+  PATH="/page/info/move/moveinternalinit" SHAPE="32,1729,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="moveinternal" NAME="forward0"
+   PATH="/page/info/move/moveinternal.jsp" TARGET="page10"
+   TITLE="moveinternal" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#idcarditerance" NAME="action76"
+  PATH="/page/info/editor/idcarditerance" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#refreshclass" NAME="action77"
+  PATH="/page/info/card/refreshclass" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#oa#noticeviewinit" NAME="action78"
+  PATH="/page/oa/noticeviewinit" SHAPE="32,385,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticeview" NAME="forward0"
+   PATH="/page/oa/noticeview.jsp" TARGET="page1" TITLE="noticeview"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#move#moveexternaloutinit" NAME="action79"
+  PATH="/page/info/move/moveexternaloutinit" SHAPE="32,7745,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="moveexternalout" NAME="forward0"
+   PATH="/page/info/move/moveexternalout.jsp" TARGET="page57"
+   TITLE="moveexternalout" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#report#jasperinit" NAME="action80"
+  PATH="/page/report/jasperinit" SHAPE="32,7857,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="jasperreprot" NAME="forward0"
+   PATH="/page/report/jasperreprot.jsp" TARGET="page58"
+   TITLE="jasperreprot" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#billmonthdel" NAME="action81"
+  PATH="/page/implemention/billmonthdel" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#move#movehistoryquery" NAME="action82"
+  PATH="/page/info/move/movehistoryquery" SHAPE="32,8225,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="movehistoryquery" NAME="forward0"
+   PATH="/page/info/move/movehistoryquery.jsp" TARGET="page59"
+   TITLE="movehistoryquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#checkaccount" NAME="action83"
+  PATH="/page/system/checkaccount" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#organ#organstopinit" NAME="action84"
+  PATH="/page/organ/organstopinit" SHAPE="32,8337,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="organstop" NAME="forward0"
+   PATH="/page/organ/organstop.jsp" TARGET="page60" TITLE="organstop"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#demurral#demurraldel" NAME="action85"
+  PATH="/page/policy/demurral/demurraldel" SHAPE="32,3329,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="demurralview" NAME="forward0"
+   PATH="/page/policy/demurral/demurralview.jsp" TARGET="page22"
+   TITLE="demurralview" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#getMemberClass" NAME="action86"
+  PATH="/page/info/card/getMemberClass" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#policy#demurral#demurralqueryinit"
+  NAME="action87" PATH="/page/policy/demurral/demurralqueryinit"
+  SHAPE="32,8449,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="demurralquery" NAME="forward0"
+   PATH="/page/policy/demurral/demurralquery.jsp" TARGET="page61"
+   TITLE="demurralquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#unit#unitsaveinit" NAME="action88"
+  PATH="/page/system/unit/unitsaveinit" SHAPE="32,8673,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="unitquery" NAME="forward0"
+   PATH="/page/system/unit/unitquery.jsp" TARGET="page62"
+   TITLE="unitquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#deleteNode" NAME="action89"
+  PATH="/page/info/editor/deleteNode" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#dictionary#dictsortinit" NAME="action90"
+  PATH="/page/system/dictionary/dictsortinit" SHAPE="32,8897,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="dictsort" NAME="forward0"
+   PATH="/page/system/dictionary/dictsort.jsp" TARGET="page63"
+   TITLE="dictsort" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#welcome" NAME="action91"
+  PATH="/page/oa/welcome" SHAPE="32,9009,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="welcome" NAME="forward0"
+   PATH="/page/welcome.jsp" TARGET="page64" TITLE="welcome"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#syslog#syslogtableTree" NAME="action92"
+  PATH="/page/system/syslog/syslogtableTree" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#refclassinit" NAME="action93"
+  PATH="/page/system/refclassinit" SHAPE="240,4305,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="refclass" NAME="forward0"
+   PATH="/page/system/refclass.jsp" TARGET="page65" TITLE="refclass"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#implementionmonthquery"
+  NAME="action94" PATH="/page/implemention/implementionmonthquery"
+  SHAPE="32,9121,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="implementionmonthquery" NAME="forward0"
+   PATH="/page/implemention/implementionmonthquery.jsp" TARGET="page66"
+   TITLE="implementionmonthquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#move#moveexternalininit" NAME="action95"
+  PATH="/page/info/move/moveexternalininit" SHAPE="32,5217,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="moveexternalin" NAME="forward0"
+   PATH="/page/info/move/moveexternalin.jsp" TARGET="page33"
+   TITLE="moveexternalin" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#getMemberPic" NAME="action96"
+  PATH="/page/info/card/getMemberPic" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#search#familyQuery" NAME="action97"
+  PATH="/page/info/search/familyQuery" SHAPE="32,9345,0,0"
+  TITLE="familyQueryForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="familyquery" NAME="forward0"
+   PATH="/page/info/search/familyquery.jsp" TARGET="page67"
+   TITLE="familyquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#memberInfoCardTrees" NAME="action98"
+  PATH="/page/info/card/memberInfoCardTrees" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#editor#infoEntityList" NAME="action99"
+  PATH="/page/info/editor/infoEntityList" SHAPE="32,9457,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="infoentitylist" NAME="forward0"
+   PATH="/page/info/editor/infoentitylist.jsp" TARGET="page68"
+   TITLE="infoentitylist" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#organeditcommitinit" NAME="action100"
+  PATH="/page/organ/organeditcommitinit" SHAPE="32,6145,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="organeditcommit" NAME="forward0"
+   PATH="/page/organ/organeditcommit.jsp" TARGET="page42"
+   TITLE="organeditcommit" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#currentmonthdetails"
+  NAME="action101" PATH="/page/implemention/currentmonthdetails"
+  SHAPE="32,9569,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="currentmonthdetails" NAME="forward0"
+   PATH="currentmonthdetails" TARGET="page69"
+   TITLE="currentmonthdetails" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#infolog#infologview" NAME="action102"
+  PATH="/page/info/infolog/infologview" SHAPE="32,9681,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="infologview" NAME="forward0"
+   PATH="/page/info/infolog/infologview.jsp" TARGET="page70"
+   TITLE="infologview" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#paperprint#printpaperhandle" NAME="action103"
+  PATH="/page/paperprint/printpaperhandle" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#getOper" NAME="action104"
+  PATH="/page/info/card/getOper" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#infolog#infologquery" NAME="action105"
+  PATH="/page/info/infolog/infologquery" SHAPE="32,9793,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="infologquery" NAME="forward0"
+   PATH="/page/info/infolog/infologquery.jsp" TARGET="page71"
+   TITLE="infologquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#report#report" NAME="action106"
+  PATH="/page/report/report" SHAPE="32,8113,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="reportnational" NAME="forward0"
+   PATH="/page/report/report_national.jsp" TARGET="page72"
+   TITLE="reportnational" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="reportnational1" NAME="forward1"
+   PATH="/page/report/nationalreport.jsp" TARGET="page110"
+   TITLE="reportnational1" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#unit#unitsave" NAME="action107"
+  PATH="/page/system/unit/unitsave" SHAPE="32,10017,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="unit" NAME="forward0"
+   PATH="/page/system/unit/unit.jsp" TARGET="page73" TITLE="unit"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#announcementquery" NAME="action108"
+  PATH="/page/oa/announcementquery" SHAPE="32,10129,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="announcementmanagequery" NAME="forward0"
+   PATH="/page/oa/announcementmanagequery.jsp" TARGET="page74"
+   TITLE="announcementmanagequery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#syslog#syslogview" NAME="action109"
+  PATH="/page/system/syslog/syslogview" SHAPE="32,10241,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="syslogview" NAME="forward0"
+   PATH="/page/system/syslog/syslogview.jsp" TARGET="page75"
+   TITLE="syslogview" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#modipassword" NAME="action110"
+  PATH="/page/system/modipassword" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#createFamilySave"
+  NAME="action111" PATH="/page/info/neweditor/createFamilySave"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#newfamilyinfocard1" NAME="action112"
+  PATH="/page/info/card/newfamilyinfocard1" SHAPE="32,10353,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="newfamilyinfocard" NAME="forward0"
+   PATH="/page/info/card/newfamilyinfocard.jsp" TARGET="page76"
+   TITLE="newfamilyinfocard" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#dictionary#dicthandle" NAME="action113"
+  PATH="/page/system/dictionary/dicthandle" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#employeesave" NAME="action114"
+  PATH="/page/system/employeesave" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#organ#organdetail" NAME="action115"
+  PATH="/page/organ/organdetail" SHAPE="32,10577,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="organdetail" NAME="forward0"
+   PATH="/page/organ/organdetail.jsp" TARGET="page77"
+   TITLE="organdetail" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#undo#removefamilyundo" NAME="action116"
+  PATH="/page/info/undo/removefamilyundo" SHAPE="32,10689,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="removefamilyundo" NAME="forward0"
+   PATH="/page/info/undo/removefamilyundo.jsp" TARGET="page78"
+   TITLE="removefamilyundo" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#unit#unitquery" NAME="action117"
+  PATH="/page/system/unit/unitquery" SHAPE="32,8785,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="unitquery" NAME="forward0"
+   PATH="/page/system/unit/unitquery.jsp" TARGET="page62"
+   TITLE="unitquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#dictionary#dictinit" NAME="action118"
+  PATH="/page/system/dictionary/dictinit" SHAPE="32,10801,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="dict" NAME="forward0"
+   PATH="/page/system/dictionary/dict.jsp" TARGET="page79" TITLE="dict"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#report#reportnational" NAME="action119"
+  PATH="/page/report/reportnational" SHAPE="32,7969,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="jasperreprot" NAME="forward0"
+   PATH="/page/report/jasperreprot.jsp" TARGET="page58"
+   TITLE="jasperreprot" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="reportnational" NAME="forward1"
+   PATH="/page/report/report_national.jsp" TARGET="page72"
+   TITLE="reportnational" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#organgetchilds" NAME="action120"
+  PATH="/page/organ/organgetchilds" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#organ#operpersoninit" NAME="action121"
+  PATH="/page/organ/operpersoninit" SHAPE="32,10913,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="operperson" NAME="forward0"
+   PATH="/page/organ/operperson.jsp" TARGET="page80" TITLE="operperson"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#paperprint#paperprint" NAME="action122"
+  PATH="/page/paperprint/paperprint" SHAPE="32,11025,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="paperprint" NAME="forward0"
+   PATH="/page/paperprint/paperprint.jsp" TARGET="page81"
+   TITLE="paperprint" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#querymanage#infoqueryresultgetchild"
+  NAME="action123" PATH="/page/querymanage/infoqueryresultgetchild"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#familyInfoCardTree" NAME="action124"
+  PATH="/page/info/card/familyInfoCardTree" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#implemention#billcreatefile" NAME="action125"
+  PATH="/page/implemention/billcreatefile" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#undo#moveoutundoquery" NAME="action126"
+  PATH="/page/info/undo/moveoutundoquery" SHAPE="32,11137,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="moveoutundoquery" NAME="forward0"
+   PATH="/page/info/undo/moveoutundoquery.jsp" TARGET="page82"
+   TITLE="moveoutundoquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#getEmployees" NAME="action127"
+  PATH="/page/oa/getEmployees" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#policy#query#statPolicyFamilyInit"
+  NAME="action128" PATH="/page/policy/query/statPolicyFamilyInit"
+  SHAPE="32,11249,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="statpolicyfamily" NAME="forward0"
+   PATH="/page/policy/query/statpolicyfamily.jsp" TARGET="page83"
+   TITLE="statpolicyfamily" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#infolog#infologqueryinit" NAME="action129"
+  PATH="/page/info/infolog/infologqueryinit" SHAPE="32,9905,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="infologquery" NAME="forward0"
+   PATH="/page/info/infolog/infologquery.jsp" TARGET="page71"
+   TITLE="infologquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#billmonthsave" NAME="action130"
+  PATH="/page/implemention/billmonthsave" SHAPE="32,129,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="result" NAME="forward0"
+   PATH="/page/implemention/billcreateinit.do" TARGET="action44"
+   TITLE="result" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward1"
+   PATH="/page/common/error.jsp" TARGET="page0" TITLE="error"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#menu#menuchild" NAME="action131"
+  PATH="/page/system/menu/menuchild" SHAPE="32,11473,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="menuchild" NAME="forward0"
+   PATH="/page/system/menu/menuchild.jsp" TARGET="page84"
+   TITLE="menuchild" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#mysyslog" NAME="action132"
+  PATH="/page/system/mysyslog" SHAPE="32,11585,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="mylog" NAME="forward0"
+   PATH="/page/system/mylog.jsp" TARGET="page85" TITLE="mylog"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#noticedetail" NAME="action133"
+  PATH="/page/oa/noticedetail" SHAPE="32,11697,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticedetail" NAME="forward0"
+   PATH="/page/oa/noticedetail.jsp" TARGET="page86" TITLE="noticedetail"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#alteration#changemasterinit"
+  NAME="action134" PATH="/page/info/alteration/changemasterinit"
+  SHAPE="32,11809,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="changemaster" NAME="forward0"
+   PATH="/page/info/alteration/changemaster.jsp" TARGET="page87"
+   TITLE="changemaster" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#organeditcommit" NAME="action135"
+  PATH="/page/organ/organeditcommit" SHAPE="32,4993,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="organinfo" NAME="forward0"
+   PATH="/page/organ/organinfo.jsp" TARGET="page88" TITLE="organinfo"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#infovalidate#validateterm" NAME="action136"
+  PATH="/page/infovalidate/validateterm" SHAPE="32,11921,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="validateterm" NAME="forward0"
+   PATH="/page/infovalidate/validateterm.jsp" TARGET="page89"
+   TITLE="validateterm" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#paperprint#paperprintredohandle"
+  NAME="action137" PATH="/page/paperprint/paperprintredohandle"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#familyInfoCardTrees" NAME="action138"
+  PATH="/page/info/card/familyInfoCardTrees" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#employeelist" NAME="action139"
+  PATH="/page/system/employeelist" SHAPE="32,12033,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="employee" NAME="forward0"
+   PATH="/page/system/employee.jsp" TARGET="page90" TITLE="employee"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#oafileview" NAME="action140"
+  PATH="/page/oa/oafileview" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#implemention#interfacedefineview"
+  NAME="action141" PATH="/page/implemention/interfacedefineview"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#infoGeFamily" NAME="action142"
+  PATH="/page/info/infoGeFamily" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#incomesave" NAME="action143"
+  PATH="/page/info/neweditor/incomesave" SHAPE="32,12145,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="result" NAME="forward0"
+   PATH="/page/common/result.jsp" TARGET="page91" TITLE="result"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#annexinit" NAME="action144"
+  PATH="/page/info/neweditor/annexinit" SHAPE="32,12257,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="annex" NAME="forward0"
+   PATH="/page/info/neweditor/annex.jsp" TARGET="page92" TITLE="annex"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#query#noticequeryinit" NAME="action145"
+  PATH="/page/policy/query/noticequeryinit" SHAPE="32,12369,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticequery" NAME="forward0"
+   PATH="/page/policy/query/noticequery.jsp" TARGET="page93"
+   TITLE="noticequery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#transfermanage" NAME="action146"
+  PATH="/page/oa/transfermanage" SHAPE="32,12593,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="transfermanage" NAME="forward0"
+   PATH="/page/oa/transfermanage.jsp" TARGET="page94"
+   TITLE="transfermanage" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#query#noticequery" NAME="action147"
+  PATH="/page/policy/query/noticequery" SHAPE="32,12481,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="noticequery" NAME="forward0"
+   PATH="/page/policy/query/noticequery.jsp" TARGET="page93"
+   TITLE="noticequery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#operpersonsave" NAME="action148"
+  PATH="/page/organ/operpersonsave" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#oa#writemsg" NAME="action149"
+  PATH="/page/oa/writemsg" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#getCurrentList" NAME="action150"
+  PATH="/page/info/card/getCurrentList" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#menu#menusave" NAME="action151"
+  PATH="/page/system/menu/menusave" SHAPE="32,12705,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="menuedit" NAME="forward0"
+   PATH="/page/system/menu/menuedit.jsp" TARGET="page95"
+   TITLE="menuedit" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#familyInfoCardLeaf" NAME="action152"
+  PATH="/page/info/card/familyInfoCardLeaf" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#move#moveexternalout" NAME="action153"
+  PATH="/page/info/move/moveexternalout" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#newfamilyinfocard" NAME="action154"
+  PATH="/page/info/card/newfamilyinfocard" SHAPE="32,10465,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="newfamilyinfocard" NAME="forward0"
+   PATH="/page/info/card/newfamilyinfocard.jsp" TARGET="page76"
+   TITLE="newfamilyinfocard" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#remove#removefamily" NAME="action155"
+  PATH="/page/info/remove/removefamily" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#dictionary#dictvalueinit"
+  NAME="action156" PATH="/page/system/dictionary/dictvalueinit"
+  SHAPE="32,12929,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="dictvalue" NAME="forward0"
+   PATH="/page/system/dictionary/dictvalue.jsp" TARGET="page96"
+   TITLE="dictvalue" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#organinit" NAME="action157"
+  PATH="/page/organ/organinit" SHAPE="32,13041,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="organ" NAME="forward0"
+   PATH="/page/organ/organ.jsp" TARGET="page97" TITLE="organ"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#exportfile#exportExcel" NAME="action158"
+  PATH="/page/system/exportfile/exportExcel" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#loginout" NAME="action159" PATH="/loginout"
+  SHAPE="32,6849,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="login" NAME="forward0" PATH="/login.jsp"
+   TARGET="page49" TITLE="login" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#organizationInit" NAME="action160"
+  PATH="/page/system/organizationInit" SHAPE="32,13153,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="organization" NAME="forward0"
+   PATH="/page/system/organization.jsp" TARGET="page98"
+   TITLE="organization" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#editorInfoCardTree"
+  NAME="action161" PATH="/page/info/editor/editorInfoCardTree"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#memberInfoCardLeaf" NAME="action162"
+  PATH="/page/info/card/memberInfoCardLeaf" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#card#newviewchild" NAME="action163"
+  PATH="/page/info/card/newviewchild" SHAPE="32,13265,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="newviewchild" NAME="forward0"
+   PATH="/page/info/card/newviewchild.jsp" TARGET="page99"
+   TITLE="newviewchild" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#getCurrentListout" NAME="action164"
+  PATH="/page/info/card/getCurrentListout" SHAPE="32,13377,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="showchild" NAME="forward0"
+   PATH="/page/info/card/showchild.jsp" TARGET="page100"
+   TITLE="showchild" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#organ#organedit" NAME="action165"
+  PATH="/page/organ/organedit" SHAPE="32,4849,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward0"
+   PATH="/page/organ/error.jsp" TARGET="page32" TITLE="error"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="organinfo" NAME="forward1"
+   PATH="/page/organ/organinfo.jsp" TARGET="page88" TITLE="organinfo"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#createFamily" NAME="action166"
+  PATH="/page/info/neweditor/createFamily" SHAPE="32,13489,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="createfamily" NAME="forward0"
+   PATH="/page/info/neweditor/createfamily.jsp" TARGET="page101"
+   TITLE="createfamily" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#card#memberInfoCardTree" NAME="action167"
+  PATH="/page/info/card/memberInfoCardTree" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#editor#addNodeInfo" NAME="action168"
+  PATH="/page/info/editor/addNodeInfo" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#policy#demurral#demurralquery" NAME="action169"
+  PATH="/page/policy/demurral/demurralquery" SHAPE="32,8561,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="demurralquery" NAME="forward0"
+   PATH="/page/policy/demurral/demurralquery.jsp" TARGET="page61"
+   TITLE="demurralquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#undo#removefamilyquery" NAME="action170"
+  PATH="/page/info/undo/removefamilyquery" SHAPE="32,13489,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="removefamilyquery" NAME="forward0"
+   PATH="/page/info/undo/removefamilyquery.jsp" TARGET="page102"
+   TITLE="removefamilyquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#unit#checkunit" NAME="action171"
+  PATH="/page/system/unit/checkunit" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#checkoldpwd" NAME="action172"
+  PATH="/page/system/checkoldpwd" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#memberbasesave" NAME="action173"
+  PATH="/page/info/neweditor/memberbasesave" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#organ#organstop" NAME="action174"
+  PATH="/page/organ/organstop" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#dictionary#dictsortsave"
+  NAME="action175" PATH="/page/system/dictionary/dictsortsave"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#editor#editorInfoCardLeaf"
+  NAME="action176" PATH="/page/info/editor/editorInfoCardLeaf"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#organ#organfindchildlevel" NAME="action177"
+  PATH="/page/organ/organfindchildlevel" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#system#resetpwd" NAME="action178"
+  PATH="/page/system/resetpwd" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#readSubMenu" NAME="action179"
+  PATH="/page/readSubMenu" SHAPE="32,13489,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="submenu" NAME="forward0"
+   PATH="/page/submenu.jsp" TARGET="page103" TITLE="submenu"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#move#readnextorg1" NAME="action180"
+  PATH="/page/info/move/readnextorg1" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#synthesis#synthesisquerycreate"
+  NAME="action181" PATH="/page/info/synthesis/synthesisquerycreate"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#paperprint#printpaperpreivew" NAME="action182"
+  PATH="/page/paperprint/printpaperpreivew" SHAPE="32,13489,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="paperprintpreiview" NAME="forward0"
+   PATH="/page/paperprint/paperprintpreiview.jsp" TARGET="page104"
+   TITLE="paperprintpreiview" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#organizationGetChild" NAME="action183"
+  PATH="/page/system/organizationGetChild" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#policy#query#statPolicyFamily" NAME="action184"
+  PATH="/page/policy/query/statPolicyFamily" SHAPE="32,11361,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="statpolicyfamily" NAME="forward0"
+   PATH="/page/policy/query/statpolicyfamily.jsp" TARGET="page83"
+   TITLE="statpolicyfamily" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#transferview" NAME="action185"
+  PATH="/page/oa/transferview" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#policy#query#queryPolicyFamilyinit"
+  NAME="action186" PATH="/page/policy/query/queryPolicyFamilyinit"
+  SHAPE="32,2513,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="querypolicyfamily" NAME="forward0"
+   PATH="/page/policy/query/querypolicyfamily.jsp" TARGET="page16"
+   TITLE="querypolicyfamily" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#synthesis#synthesisquerycreateinit"
+  NAME="action187" PATH="/page/info/synthesis/synthesisquerycreateinit"
+  SHAPE="32,13489,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="synthesisquerycreate" NAME="forward0"
+   PATH="/page/info/synthesis/synthesisquerycreate.jsp" TARGET="page105"
+   TITLE="synthesisquerycreate" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#role" NAME="action188"
+  PATH="/page/system/role" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#policy#demurral#demurralsave" NAME="action189"
+  PATH="/page/policy/demurral/demurralsave" SHAPE="32,3441,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="demurralview" NAME="forward0"
+   PATH="/page/policy/demurral/demurralview.jsp" TARGET="page22"
+   TITLE="demurralview" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#infovalidate#validateexecute" NAME="action190"
+  PATH="/page/infovalidate/validateexecute" SHAPE="32,13601,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#move#moveexternalinquery" NAME="action191"
+  PATH="/page/info/move/moveexternalinquery" SHAPE="32,13489,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="moveexternalinquery" NAME="forward0"
+   PATH="/page/info/move/moveexternalinquery.jsp" TARGET="page106"
+   TITLE="moveexternalinquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#interfacedefinesave"
+  NAME="action192" PATH="/page/implemention/interfacedefinesave"
+  SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#paperprint#papervaliquery" NAME="action193"
+  PATH="/page/paperprint/papervaliquery" SHAPE="32,13489,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="papervaliquery" NAME="forward0"
+   PATH="/page/paperprint/papervaliquery.jsp" TARGET="page107"
+   TITLE="papervaliquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#implemention#implementionmonthqueryinit"
+  NAME="action194" PATH="/page/implemention/implementionmonthqueryinit"
+  SHAPE="32,9233,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="implementionmonthquery" NAME="forward0"
+   PATH="/page/implemention/implementionmonthquery.jsp" TARGET="page66"
+   TITLE="implementionmonthquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#editor#inchsave" NAME="action195"
+  PATH="/page/info/editor/inchsave" SHAPE="32,13489,0,0"
+  TITLE="uploadForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="inch" NAME="forward0"
+   PATH="/page/info/editor/inch.jsp" TARGET="page108" TITLE="inch"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#annexbrowser" NAME="action196"
+  PATH="/page/info/neweditor/annexbrowser" SHAPE="32,13489,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="annexbrowser" NAME="forward0"
+   PATH="/page/info/neweditor/annexbrowser.jsp" TARGET="page109"
+   TITLE="annexbrowser" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#system#menu#menuinit" NAME="action197"
+  PATH="/page/system/menu/menuinit" SHAPE="32,12817,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="menuedit" NAME="forward0"
+   PATH="/page/system/menu/menuedit.jsp" TARGET="page95"
+   TITLE="menuedit" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#oa#announcementmanage" NAME="action198"
+  PATH="/page/oa/announcementmanage" SHAPE="32,13601,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page0" PATH="/page/common/error.jsp"
+  SHAPE="256,34,0,0" SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1" PATH="/page/oa/noticeview.jsp"
+  SHAPE="256,290,0,0" SUBTYPE="jsp" TITLE="noticeview.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="/page/system/rolemain.jsp"
+  SHAPE="240,514,0,0" SUBTYPE="jsp" TITLE="rolemain.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page3"
+  PATH="/page/implemention/querypolicybymonth.jsp" SHAPE="240,626,0,0"
+  SUBTYPE="jsp" TITLE="querypolicybymonth.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4" PATH="/page/system/personinfo.jsp"
+  SHAPE="240,738,0,0" SUBTYPE="jsp" TITLE="personinfo.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5" PATH="/page/system/menu/menutree.jsp"
+  SHAPE="240,850,0,0" SUBTYPE="jsp" TITLE="menutree.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page6"
+  PATH="/page/policy/query/noticepolicyquery.jsp" SHAPE="256,962,0,0"
+  SUBTYPE="jsp" TITLE="noticepolicyquery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7" PATH="/page/querymanage/infoqueryresult.jsp"
+  SHAPE="240,1298,0,0" SUBTYPE="jsp" TITLE="infoqueryresult.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8"
+  PATH="/page/implemention/billcreatefilepriview.jsp"
+  SHAPE="240,1410,0,0" SUBTYPE="jsp" TITLE="billcreatefilepriview.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page9" PATH="/page/oa/noticebrowser.jsp"
+  SHAPE="240,1522,0,0" SUBTYPE="jsp" TITLE="noticebrowser.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page10" PATH="/page/info/move/moveinternal.jsp"
+  SHAPE="256,1634,0,0" SUBTYPE="jsp" TITLE="moveinternal.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page11" PATH="/page/paperprint/paperprintredo.jsp"
+  SHAPE="240,1858,0,0" SUBTYPE="jsp" TITLE="paperprintredo.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page12"
+  PATH="/page/info/synthesis/residentquery.jsp" SHAPE="240,1970,0,0"
+  SUBTYPE="jsp" TITLE="residentquery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page13" PATH="/page/info/neweditor/memberbase.jsp"
+  SHAPE="240,2082,0,0" SUBTYPE="jsp" TITLE="memberbase.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page14" PATH="/page/oa/announcementbrowser.jsp"
+  SHAPE="240,2194,0,0" SUBTYPE="jsp" TITLE="announcementbrowser.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page15" PATH="/page/info/viewpic.jsp"
+  SHAPE="240,2306,0,0" SUBTYPE="jsp" TITLE="viewpic.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page16"
+  PATH="/page/policy/query/querypolicyfamily.jsp" SHAPE="256,2418,0,0"
+  SUBTYPE="jsp" TITLE="querypolicyfamily.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page17" PATH="/page/info/neweditor/familybase.jsp"
+  SHAPE="240,2642,0,0" SUBTYPE="jsp" TITLE="familybase.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page18" PATH="/page/info/editor/upload.jsp"
+  SHAPE="240,2754,0,0" SUBTYPE="jsp" TITLE="upload.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/page/info/editor/upload.do"
+   SUBTYPE="confirmed" TARGET="action73"
+   TITLE="/page/info/editor/upload.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page19" PATH="/page/info/editor/familylist.jsp"
+  SHAPE="256,3010,0,0" SUBTYPE="jsp" TITLE="familylist.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page20"
+  PATH="/page/implemention/billcreatefile.jsp" SHAPE="240,3122,0,0"
+  SUBTYPE="jsp" TITLE="billcreatefile.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page21" PATH="/page/info/editor/familysave.jsp"
+  SHAPE="464,2850,0,0" SUBTYPE="jsp" TITLE="familysave.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page22"
+  PATH="/page/policy/demurral/demurralview.jsp" SHAPE="272,3234,0,0"
+  SUBTYPE="jsp" TITLE="demurralview.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page23" PATH="/page/menud.jsp" SHAPE="272,3570,0,0"
+  SUBTYPE="jsp" TITLE="menud.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page24" PATH="/page/menutree.jsp"
+  SHAPE="272,3746,0,0" SUBTYPE="jsp" TITLE="menutree.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page25" PATH="/page/menunew.jsp"
+  SHAPE="272,3858,0,0" SUBTYPE="jsp" TITLE="menunew.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page26" PATH="/page/info/card/newchildlist.jsp"
+  SHAPE="240,3970,0,0" SUBTYPE="jsp" TITLE="newchildlist.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page27" PATH="/page/oa/transferbrowser.jsp"
+  SHAPE="240,4082,0,0" SUBTYPE="jsp" TITLE="transferbrowser.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page28" PATH="/page/info/neweditor/familysort.jsp"
+  SHAPE="240,4194,0,0" SUBTYPE="jsp" TITLE="familysort.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page29" PATH="/page/info/card/view.jsp"
+  SHAPE="240,4418,0,0" SUBTYPE="jsp" TITLE="view.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page30" PATH="/page/oa/transferquery.jsp"
+  SHAPE="240,4530,0,0" SUBTYPE="jsp" TITLE="transferquery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page31" PATH="/page/info/editor/infoeditor.jsp"
+  SHAPE="240,4642,0,0" SUBTYPE="jsp" TITLE="infoeditor.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page32" PATH="/page/organ/error.jsp"
+  SHAPE="256,4754,0,0" SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page33" PATH="/page/info/move/moveexternalin.jsp"
+  SHAPE="256,5122,0,0" SUBTYPE="jsp" TITLE="moveexternalin.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page34" PATH="/page/implemention/billcreate.jsp"
+  SHAPE="464,130,0,0" SUBTYPE="jsp" TITLE="billcreate.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page35" PATH="/page/oa/noticemanagequery.jsp"
+  SHAPE="240,5346,0,0" SUBTYPE="jsp" TITLE="noticemanagequery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page36" PATH="/page/info/neweditor/asset.jsp"
+  SHAPE="240,5458,0,0" SUBTYPE="jsp" TITLE="asset.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page37" PATH="/page/info/neweditor/income.jsp"
+  SHAPE="240,5570,0,0" SUBTYPE="jsp" TITLE="income.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page38" PATH="/page/info/card/familyinfocard.jsp"
+  SHAPE="448,1170,0,0" SUBTYPE="jsp" TITLE="familyinfocard.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page39" PATH="/page/info/editor/editorFrameset.jsp"
+  SHAPE="240,5682,0,0" SUBTYPE="jsp" TITLE="editorFrameset.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page40" PATH="/page/info/neweditor/editormenu.jsp"
+  SHAPE="240,5794,0,0" SUBTYPE="jsp" TITLE="editormenu.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page41" PATH="/page/info/familyinfo.jsp"
+  SHAPE="240,5906,0,0" SUBTYPE="jsp" TITLE="familyinfo.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/page/info/infoinit.do"
+   SUBTYPE="confirmed" TARGET="action54" TITLE="/page/info/infoinit.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page42" PATH="/page/organ/organeditcommit.jsp"
+  SHAPE="256,6018,0,0" SUBTYPE="jsp" TITLE="organeditcommit.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page43" PATH="/page/organ/organundoedit.jsp"
+  SHAPE="256,6162,0,0" SUBTYPE="jsp" TITLE="organundoedit.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page44" PATH="/page/system/role.jsp"
+  SHAPE="240,6274,0,0" SUBTYPE="jsp" TITLE="role.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page45"
+  PATH="/page/paperprint/paperprintbrowse.jsp" SHAPE="240,6386,0,0"
+  SUBTYPE="jsp" TITLE="paperprintbrowse.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page46" PATH="/page/system/syslog/syslogtable.jsp"
+  SHAPE="240,6498,0,0" SUBTYPE="jsp" TITLE="syslogtable.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page47" PATH="/page/organ/organamalgamate.jsp"
+  SHAPE="240,6610,0,0" SUBTYPE="jsp" TITLE="organamalgamate.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page48" PATH="/page/index.jsp" SHAPE="256,6722,0,0"
+  SUBTYPE="jsp" TITLE="index.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page49" PATH="/login.jsp" SHAPE="256,6866,0,0"
+  SUBTYPE="jsp" TITLE="login.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page50" PATH="mainmenu" SHAPE="240,6978,0,0"
+  SUBTYPE="tile" TITLE="mainmenu" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page51" PATH="/page/oa/transferrecequery.jsp"
+  SHAPE="240,7090,0,0" SUBTYPE="jsp" TITLE="transferrecequery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page52"
+  PATH="/page/info/alteration/changemasterresult.jsp"
+  SHAPE="240,7202,0,0" SUBTYPE="jsp" TITLE="changemasterresult.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page53" PATH="/page/info/undo/moveoutundo.jsp"
+  SHAPE="240,7314,0,0" SUBTYPE="jsp" TITLE="moveoutundo.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page54"
+  PATH="/page/implemention/interfacedefine.jsp" SHAPE="240,7426,0,0"
+  SUBTYPE="jsp" TITLE="interfacedefine.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page55" PATH="/page/info/editor/result.jsp"
+  SHAPE="240,7538,0,0" SUBTYPE="jsp" TITLE="result.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page56"
+  PATH="/page/infovalidate/infovalidatequery.jsp" SHAPE="240,7650,0,0"
+  SUBTYPE="jsp" TITLE="infovalidatequery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page57" PATH="/page/info/move/moveexternalout.jsp"
+  SHAPE="240,7762,0,0" SUBTYPE="jsp" TITLE="moveexternalout.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page58" PATH="/page/report/jasperreprot.jsp"
+  SHAPE="256,7874,0,0" SUBTYPE="jsp" TITLE="jasperreprot.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page59" PATH="/page/info/move/movehistoryquery.jsp"
+  SHAPE="240,8242,0,0" SUBTYPE="jsp" TITLE="movehistoryquery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page60" PATH="/page/organ/organstop.jsp"
+  SHAPE="240,8354,0,0" SUBTYPE="jsp" TITLE="organstop.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page61"
+  PATH="/page/policy/demurral/demurralquery.jsp" SHAPE="256,8466,0,0"
+  SUBTYPE="jsp" TITLE="demurralquery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page62" PATH="/page/system/unit/unitquery.jsp"
+  SHAPE="256,8690,0,0" SUBTYPE="jsp" TITLE="unitquery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page63" PATH="/page/system/dictionary/dictsort.jsp"
+  SHAPE="240,8914,0,0" SUBTYPE="jsp" TITLE="dictsort.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page64" PATH="/page/welcome.jsp"
+  SHAPE="240,9026,0,0" SUBTYPE="jsp" TITLE="welcome.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page65" PATH="/page/system/refclass.jsp"
+  SHAPE="448,4290,0,0" SUBTYPE="jsp" TITLE="refclass.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page66"
+  PATH="/page/implemention/implementionmonthquery.jsp"
+  SHAPE="256,9138,0,0" SUBTYPE="jsp" TITLE="implementionmonthquery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page67" PATH="/page/info/search/familyquery.jsp"
+  SHAPE="240,9362,0,0" SUBTYPE="jsp" TITLE="familyquery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page68" PATH="/page/info/editor/infoentitylist.jsp"
+  SHAPE="240,9474,0,0" SUBTYPE="jsp" TITLE="infoentitylist.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page69" PATH="currentmonthdetails"
+  SHAPE="240,9586,0,0" SUBTYPE="tile" TITLE="currentmonthdetails"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page70" PATH="/page/info/infolog/infologview.jsp"
+  SHAPE="240,9698,0,0" SUBTYPE="jsp" TITLE="infologview.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page71" PATH="/page/info/infolog/infologquery.jsp"
+  SHAPE="256,9810,0,0" SUBTYPE="jsp" TITLE="infologquery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page72" PATH="/page/report/report_national.jsp"
+  SHAPE="256,7986,0,0" SUBTYPE="jsp" TITLE="report_national.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page73" PATH="/page/system/unit/unit.jsp"
+  SHAPE="240,10034,0,0" SUBTYPE="jsp" TITLE="unit.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page74" PATH="/page/oa/announcementmanagequery.jsp"
+  SHAPE="240,10146,0,0" SUBTYPE="jsp"
+  TITLE="announcementmanagequery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page75" PATH="/page/system/syslog/syslogview.jsp"
+  SHAPE="240,10258,0,0" SUBTYPE="jsp" TITLE="syslogview.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page76"
+  PATH="/page/info/card/newfamilyinfocard.jsp" SHAPE="256,10370,0,0"
+  SUBTYPE="jsp" TITLE="newfamilyinfocard.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page77" PATH="/page/organ/organdetail.jsp"
+  SHAPE="240,10594,0,0" SUBTYPE="jsp" TITLE="organdetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page78" PATH="/page/info/undo/removefamilyundo.jsp"
+  SHAPE="240,10706,0,0" SUBTYPE="jsp" TITLE="removefamilyundo.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page79" PATH="/page/system/dictionary/dict.jsp"
+  SHAPE="240,10818,0,0" SUBTYPE="jsp" TITLE="dict.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page80" PATH="/page/organ/operperson.jsp"
+  SHAPE="240,10930,0,0" SUBTYPE="jsp" TITLE="operperson.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page81" PATH="/page/paperprint/paperprint.jsp"
+  SHAPE="240,11042,0,0" SUBTYPE="jsp" TITLE="paperprint.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page82" PATH="/page/info/undo/moveoutundoquery.jsp"
+  SHAPE="240,11154,0,0" SUBTYPE="jsp" TITLE="moveoutundoquery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page83"
+  PATH="/page/policy/query/statpolicyfamily.jsp" SHAPE="256,11266,0,0"
+  SUBTYPE="jsp" TITLE="statpolicyfamily.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page84" PATH="/page/system/menu/menuchild.jsp"
+  SHAPE="240,11490,0,0" SUBTYPE="jsp" TITLE="menuchild.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page85" PATH="/page/system/mylog.jsp"
+  SHAPE="240,11602,0,0" SUBTYPE="jsp" TITLE="mylog.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page86" PATH="/page/oa/noticedetail.jsp"
+  SHAPE="240,11714,0,0" SUBTYPE="jsp" TITLE="noticedetail.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page87"
+  PATH="/page/info/alteration/changemaster.jsp" SHAPE="240,11826,0,0"
+  SUBTYPE="jsp" TITLE="changemaster.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0"
+   PATH="/page/info/alteration/changemaster.do" SUBTYPE="confirmed"
+   TARGET="action68" TITLE="/page/info/alteration/changemaster.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page88" PATH="/page/organ/organinfo.jsp"
+  SHAPE="256,4866,0,0" SUBTYPE="jsp" TITLE="organinfo.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page89" PATH="/page/infovalidate/validateterm.jsp"
+  SHAPE="240,11938,0,0" SUBTYPE="jsp" TITLE="validateterm.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page90" PATH="/page/system/employee.jsp"
+  SHAPE="240,12050,0,0" SUBTYPE="jsp" TITLE="employee.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page91" PATH="/page/common/result.jsp"
+  SHAPE="240,12162,0,0" SUBTYPE="jsp" TITLE="result.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page92" PATH="/page/info/neweditor/annex.jsp"
+  SHAPE="240,12274,0,0" SUBTYPE="jsp" TITLE="annex.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page93" PATH="/page/policy/query/noticequery.jsp"
+  SHAPE="256,12386,0,0" SUBTYPE="jsp" TITLE="noticequery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page94" PATH="/page/oa/transfermanage.jsp"
+  SHAPE="240,12610,0,0" SUBTYPE="jsp" TITLE="transfermanage.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page95" PATH="/page/system/menu/menuedit.jsp"
+  SHAPE="256,12722,0,0" SUBTYPE="jsp" TITLE="menuedit.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page96"
+  PATH="/page/system/dictionary/dictvalue.jsp" SHAPE="240,12946,0,0"
+  SUBTYPE="jsp" TITLE="dictvalue.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page97" PATH="/page/organ/organ.jsp"
+  SHAPE="240,13058,0,0" SUBTYPE="jsp" TITLE="organ.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page98" PATH="/page/system/organization.jsp"
+  SHAPE="240,13170,0,0" SUBTYPE="jsp" TITLE="organization.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page99" PATH="/page/info/card/newviewchild.jsp"
+  SHAPE="240,13282,0,0" SUBTYPE="jsp" TITLE="newviewchild.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page100" PATH="/page/info/card/showchild.jsp"
+  SHAPE="240,13394,0,0" SUBTYPE="jsp" TITLE="showchild.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page101"
+  PATH="/page/info/neweditor/createfamily.jsp" SHAPE="240,13506,0,0"
+  SUBTYPE="jsp" TITLE="createfamily.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page102"
+  PATH="/page/info/undo/removefamilyquery.jsp" SHAPE="240,13618,0,0"
+  SUBTYPE="jsp" TITLE="removefamilyquery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page103" PATH="/page/submenu.jsp"
+  SHAPE="240,13506,0,0" SUBTYPE="jsp" TITLE="submenu.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page104"
+  PATH="/page/paperprint/paperprintpreiview.jsp" SHAPE="240,13506,0,0"
+  SUBTYPE="jsp" TITLE="paperprintpreiview.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page105"
+  PATH="/page/info/synthesis/synthesisquerycreate.jsp"
+  SHAPE="240,13506,0,0" SUBTYPE="jsp" TITLE="synthesisquerycreate.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page106"
+  PATH="/page/info/move/moveexternalinquery.jsp" SHAPE="240,13506,0,0"
+  SUBTYPE="jsp" TITLE="moveexternalinquery.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page107" PATH="/page/paperprint/papervaliquery.jsp"
+  SHAPE="240,13506,0,0" SUBTYPE="jsp" TITLE="papervaliquery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page108" PATH="/page/info/editor/inch.jsp"
+  SHAPE="240,13506,0,0" SUBTYPE="jsp" TITLE="inch.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/page/info/editor/inchsave.do"
+   SUBTYPE="confirmed" TARGET="action195"
+   TITLE="/page/info/editor/inchsave.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page109"
+  PATH="/page/info/neweditor/annexbrowser.jsp" SHAPE="240,13506,0,0"
+  SUBTYPE="jsp" TITLE="annexbrowser.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#report#rygc" NAME="action199"
+  PATH="/page/report/rygc" SHAPE="448,13489,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#newapprove#baseapplyinit" NAME="action200"
+  PATH="/page/newapprove/baseapplyinit" SHAPE="32,13521,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="baseapply" NAME="forward0"
+   PATH="/page/newapprove/baseapply.jsp" TARGET="page111"
+   TITLE="baseapply" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#removemember" NAME="action201"
+  PATH="/page/info/neweditor/removemember" SHAPE="32,13521,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="result" NAME="forward0"
+   PATH="/page/info/neweditor/result.jsp" TARGET="page112"
+   TITLE="result" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#account#batchcancel" NAME="action202"
+  PATH="/page/policy/account/batchcancel" SHAPE="448,13521,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#policy#account#batchcancelinit"
+  NAME="action203" PATH="/page/policy/account/batchcancelinit"
+  SHAPE="32,13521,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="batchcancel" NAME="forward0"
+   PATH="/page/policy/account/batchcancel.jsp" TARGET="page113"
+   TITLE="batchcancel" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#account#batchinit" NAME="action204"
+  PATH="/page/policy/account/batchinit" SHAPE="32,13521,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="batchinit" NAME="forward0"
+   PATH="/page/policy/account/batchinit.jsp" TARGET="page114"
+   TITLE="batchinit" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#info#neweditor#removememberinit"
+  NAME="action205" PATH="/page/info/neweditor/removememberinit"
+  SHAPE="32,13521,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="removemember" NAME="forward0"
+   PATH="/page/info/neweditor/removemember.jsp" TARGET="page115"
+   TITLE="removemember" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#newapprove#baseapplyquery" NAME="action206"
+  PATH="/page/newapprove/baseapplyquery" SHAPE="32,13521,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="baseapplyquery" NAME="forward0"
+   PATH="/page/newapprove/baseapplyquery.jsp" TARGET="page116"
+   TITLE="baseapplyquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#newapprove#baseapplyqueryinit" NAME="action207"
+  PATH="/page/newapprove/baseapplyqueryinit" SHAPE="32,13521,0,0"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="baseapplyquery" NAME="forward0"
+   PATH="/page/newapprove/baseapplyquery.jsp" TARGET="page116"
+   TITLE="baseapplyquery" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#policy#account#batch" NAME="action208"
+  PATH="/page/policy/account/batch" SHAPE="656,13537,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#policy#account#batchdone" NAME="action209"
+  PATH="/page/policy/account/batchdone" SHAPE="864,13521,0,0"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#uploadpicture" NAME="action210"
+  PATH="/page/info/neweditor/uploadpicture" SHAPE="240,13537,0,0"
+  TITLE="uploadpicForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="pic" NAME="forward0"
+   PATH="/page/info/neweditor/uploadpicture.jsp" TARGET="page117"
+   TITLE="pic" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page#newapprove#baseapply" NAME="action211"
+  PATH="/page/newapprove/baseapply" SHAPE="32,13521,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="baseapplyview" NAME="forward0"
+   PATH="/page/newapprove/baseapplyview.jsp" TARGET="page118"
+   TITLE="baseapplyview" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page110" PATH="/page/report/nationalreport.jsp"
+  SHAPE="448,8113,0,0" SUBTYPE="jsp" TITLE="nationalreport.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page111" PATH="/page/newapprove/baseapply.jsp"
+  SHAPE="240,13538,0,0" SUBTYPE="jsp" TITLE="baseapply.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page112" PATH="/page/info/neweditor/result.jsp"
+  SHAPE="240,13538,0,0" SUBTYPE="jsp" TITLE="result.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page113"
+  PATH="/page/policy/account/batchcancel.jsp" SHAPE="240,13538,0,0"
+  SUBTYPE="jsp" TITLE="batchcancel.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page114" PATH="/page/policy/account/batchinit.jsp"
+  SHAPE="240,13538,0,0" SUBTYPE="jsp" TITLE="batchinit.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page115"
+  PATH="/page/info/neweditor/removemember.jsp" SHAPE="240,13538,0,0"
+  SUBTYPE="jsp" TITLE="removemember.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page116" PATH="/page/newapprove/baseapplyquery.jsp"
+  SHAPE="256,13538,0,0" SUBTYPE="jsp" TITLE="baseapplyquery.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page117"
+  PATH="/page/info/neweditor/uploadpicture.jsp" SHAPE="32,13522,0,0"
+  SUBTYPE="jsp" TITLE="uploadpicture.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0"
+   PATH="/page/info/neweditor/uploadpicture.do" SUBTYPE="confirmed"
+   TARGET="action210" TITLE="/page/info/neweditor/uploadpicture.do"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page118" PATH="/page/newapprove/baseapplyview.jsp"
+  SHAPE="240,13538,0,0" SUBTYPE="jsp" TITLE="baseapplyview.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#page#info#neweditor#mutilupload" NAME="action212"
+  PATH="/page/info/neweditor/mutilupload" SHAPE="32,13521,0,0"
+  TITLE="mutilUploadForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="uploadfile" NAME="forward0"
+   PATH="/page/info/neweditor/uploadfile.jsp" TARGET="page119"
+   TITLE="uploadfile" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page119" PATH="/page/info/neweditor/uploadfile.jsp"
+  SHAPE="240,13538,0,0" SUBTYPE="jsp" TITLE="uploadfile.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

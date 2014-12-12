@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="nationaldbinfo" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="implmonth" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select zm,
+       rs,
+       ss,
+       hs,
+       zdzm,
+       zdrs,
+       zdss,
+       zdhs,
+       ybzm,
+       ybrs,
+       ybss,
+       ybhs,
+       a.oid,
+       os.renkou,
+       os.biaozhun,
+       decode(temp,0,os.oname , (select oo.orgname from sys_t_organization oo where oo.organization_id=a.oid) ) as oname
+  from (select count(*) as hs,
+               sum(ck.checkmoney) as zm,
+               sum(fam.population) as rs,
+               sum(fam.ensurecount) as ss,
+               sum(decode(fam.saltype, 876, 1, 877, 1, 878, 1, 0)) as zdhs,
+               sum(decode(fam.saltype,
+                          876,
+                          ck.checkmoney,
+                          877,
+                          ck.checkmoney,
+                          878,
+                          ck.checkmoney,
+                          0)) as zdzm,
+               sum(decode(fam.saltype,
+                          876,
+                          fam.population,
+                          877,
+                          fam.population,
+                          878,
+                          fam.population,
+                          0)) as zdrs,
+               sum(decode(fam.saltype,
+                          876,
+                          fam.ensurecount,
+                          877,
+                          fam.ensurecount,
+                          878,
+                          fam.ensurecount,
+                          0)) as zdss,
+               sum(decode(fam.saltype, 873, 1, 874, 1, 875, 1, 0)) as ybhs,
+               sum(decode(fam.saltype,
+                          873,
+                          ck.checkmoney,
+                          874,
+                          ck.checkmoney,
+                          875,
+                          ck.checkmoney,
+                          0)) as ybzm,
+               sum(decode(fam.saltype,
+                          873,
+                          fam.population,
+                          874,
+                          fam.population,
+                          875,
+                          fam.population,
+                          0)) as ybrs,
+               sum(decode(fam.saltype,
+                          873,
+                          fam.ensurecount,
+                          874,
+                          fam.ensurecount,
+                          875,
+                          fam.ensurecount,
+                          0)) as ybss,
+               org.organization_id as oid,
+               0 as temp
+          from impl_t_month        m,
+               impl_t_month_optacc c,
+               impl_t_accoptcheck  ck,
+               info_t_family       fam,
+               sys_t_organization  org
+         where m.monname = $P{implmonth}
+           and c.month_id = m.month_id
+           and c.optacc_id = ck.optacc_id
+           and ck.policy_id = '21'
+           and fam.family_id = ck.family_id
+           and fam.organization_id like org.organization_id || '%'
+           and (org.depth = 1 or org.depth = 2)
+         group by org.organization_id
+        union
+        select count(*) as hs,
+               sum(ck.checkmoney) as zm,
+               sum(fam.population) as rs,
+               sum(fam.ensurecount) as ss,
+               sum(decode(fam.saltype, 876, 1, 877, 1, 878, 1, 0)) as zdhs,
+               sum(decode(fam.saltype,
+                          876,
+                          ck.checkmoney,
+                          877,
+                          ck.checkmoney,
+                          878,
+                          ck.checkmoney,
+                          0)) as zdzm,
+               sum(decode(fam.saltype,
+                          876,
+                          fam.population,
+                          877,
+                          fam.population,
+                          878,
+                          fam.population,
+                          0)) as zdrs,
+               sum(decode(fam.saltype,
+                          876,
+                          fam.ensurecount,
+                          877,
+                          fam.ensurecount,
+                          878,
+                          fam.ensurecount,
+                          0)) as zdss,
+               sum(decode(fam.saltype, 873, 1, 874, 1, 875, 1, 0)) as ybhs,
+               sum(decode(fam.saltype,
+                          873,
+                          ck.checkmoney,
+                          874,
+                          ck.checkmoney,
+                          875,
+                          ck.checkmoney,
+                          0)) as ybzm,
+               sum(decode(fam.saltype,
+                          873,
+                          fam.population,
+                          874,
+                          fam.population,
+                          875,
+                          fam.population,
+                          0)) as ybrs,
+               sum(decode(fam.saltype,
+                          873,
+                          fam.ensurecount,
+                          874,
+                          fam.ensurecount,
+                          875,
+                          fam.ensurecount,
+                          0)) as ybss,
+               substr(org.organization_id, 1, 4) as oid,
+               1 as temp
+          from impl_t_month        m,
+               impl_t_month_optacc c,
+               impl_t_accoptcheck  ck,
+               info_t_family       fam,
+               sys_t_organization  org
+         where m.monname = $P{implmonth}
+           and c.month_id = m.month_id
+           and c.optacc_id = ck.optacc_id
+           and ck.policy_id = '21'
+           and fam.family_id = ck.family_id
+           and fam.organization_id like org.organization_id || '%'
+           and (org.depth = 3 and org.zone = 1)
+         group by substr(org.organization_id, 1, 4)
+        union
+        select count(*) as hs,
+               sum(ck.checkmoney) as zm,
+               sum(fam.population) as rs,
+               sum(fam.ensurecount) as ss,
+               sum(decode(fam.saltype, 876, 1, 877, 1, 878, 1, 0)) as zdhs,
+               sum(decode(fam.saltype,
+                          876,
+                          ck.checkmoney,
+                          877,
+                          ck.checkmoney,
+                          878,
+                          ck.checkmoney,
+                          0)) as zdzm,
+               sum(decode(fam.saltype,
+                          876,
+                          fam.population,
+                          877,
+                          fam.population,
+                          878,
+                          fam.population,
+                          0)) as zdrs,
+               sum(decode(fam.saltype,
+                          876,
+                          fam.ensurecount,
+                          877,
+                          fam.ensurecount,
+                          878,
+                          fam.ensurecount,
+                          0)) as zdss,
+               sum(decode(fam.saltype, 873, 1, 874, 1, 875, 1, 0)) as ybhs,
+               sum(decode(fam.saltype,
+                          873,
+                          ck.checkmoney,
+                          874,
+                          ck.checkmoney,
+                          875,
+                          ck.checkmoney,
+                          0)) as ybzm,
+               sum(decode(fam.saltype,
+                          873,
+                          fam.population,
+                          874,
+                          fam.population,
+                          875,
+                          fam.population,
+                          0)) as ybrs,
+               sum(decode(fam.saltype,
+                          873,
+                          fam.ensurecount,
+                          874,
+                          fam.ensurecount,
+                          875,
+                          fam.ensurecount,
+                          0)) as ybss,
+               org.organization_id as oid,
+               0 as temp
+          from impl_t_month        m,
+               impl_t_month_optacc c,
+               impl_t_accoptcheck  ck,
+               info_t_family       fam,
+               sys_t_organization  org
+         where m.monname = $P{implmonth}
+           and c.month_id = m.month_id
+           and c.optacc_id = ck.optacc_id
+           and ck.policy_id = '21'
+           and fam.family_id = ck.family_id
+           and fam.organization_id like org.organization_id || '%'
+           and (org.depth = 3 and org.zone is null)
+         group by org.organization_id) a,
+       orgstat os
+ where a.oid = os.oid
+ order by os.oid]]>
+	</queryString>
+	<field name="ZM" class="java.math.BigDecimal"/>
+	<field name="RS" class="java.math.BigDecimal"/>
+	<field name="SS" class="java.math.BigDecimal"/>
+	<field name="HS" class="java.math.BigDecimal"/>
+	<field name="ZDZM" class="java.math.BigDecimal"/>
+	<field name="ZDRS" class="java.math.BigDecimal"/>
+	<field name="ZDSS" class="java.math.BigDecimal"/>
+	<field name="ZDHS" class="java.math.BigDecimal"/>
+	<field name="YBZM" class="java.math.BigDecimal"/>
+	<field name="YBRS" class="java.math.BigDecimal"/>
+	<field name="YBSS" class="java.math.BigDecimal"/>
+	<field name="YBHS" class="java.math.BigDecimal"/>
+	<field name="OID" class="java.lang.String"/>
+	<field name="RENKOU" class="java.lang.String"/>
+	<field name="BIAOZHUN" class="java.lang.String"/>
+	<field name="ONAME" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch"/>
+	</title>
+	<columnHeader>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="80" height="30"/>
+				<box leftPadding="15">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[地区]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="80" height="30"/>
+				<box rightPadding="15">
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[项目]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="80" height="60"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="80" y="0" width="188" height="20"/>
+				<box leftPadding="0">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[总体情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="20" width="80" height="20"/>
+				<box leftPadding="15">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[农业人口数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="40" width="80" height="20"/>
+				<box leftPadding="15">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[地区]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+</jasperReport>

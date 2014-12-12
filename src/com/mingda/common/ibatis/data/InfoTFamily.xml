@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="InfoTFamily">
+	<typeAlias alias="InfoTFamily" type="com.mingda.common.ibatis.data.InfoTFamily" />
+	<resultMap id="InfoTFamilyResult" class="com.mingda.common.ibatis.data.InfoTFamily">
+		<result property="familyId" column="FAMILY_ID" />
+		<result property="organizationId" column="ORGANIZATION_ID" />
+		<result property="familyno" column="FAMILYNO" />
+		<result property="population" column="POPULATION" />
+		<result property="mastername" column="MASTERNAME" />
+		<result property="ensurecount" column="ENSURECOUNT" />
+		<result property="masterid" column="MASTERID" />
+		<result property="assetworth" column="ASSETWORTH" />
+		<result property="consultincome" column="CONSULTINCOME" />
+		<result property="masterpapertype" column="MASTERPAPERTYPE" />
+		<result property="masterpaperid" column="MASTERPAPERID" />
+		<result property="rpraddress" column="RPRADDRESS" />
+		<result property="famaddress" column="FAMADDRESS" />
+		<result property="linkmode" column="LINKMODE" />
+		<result property="status" column="STATUS" />
+		<result property="avgincome" column="AVGINCOME" />
+		<result property="malcondition" column="MALCONDITION" />
+		<result property="onlychild" column="ONLYCHILD" />
+		<result property="allpayout" column="ALLPAYOUT" />
+		<result column="TOHTML" property="tohtml" jdbcType="VARCHAR" />
+	</resultMap>
+	<select id="selectAllFamily" resultMap="InfoTFamilyResult">
+		SELECT * FROM
+		INFO_T_FAMILY
+	</select>
+	<select id="selectFamilyById" parameterClass="int" resultMap="InfoTFamilyResult">
+		SELECT * FROM
+		INFO_T_FAMILY WHERE FAMILY_ID=#familyId#
+	</select>
+	<update id="updateFamilySalType" parameterClass="int" >
+	update info_t_family fam 
+     set fam.saltype = (select case
+                                 when saltype > 0 then
+                                  decode(cnt, 0, 879, 1, 876, 2, 877, 878)
+                                 else
+                                   decode(cnt, 0, 879, 1, 873, 2, 874, 875)
+                               end
+                          from (select mem.family_id,
+                                       sum((case
+                                             when mem.sicken in
+                                                  (820, 821, 822, 823, 824, 825, 826, 827, 828) then
+                                              1
+                                             when deformity in
+                                                  (829, 830, 831, 832, 833, 834, 835) and
+                                                  workability = 222 then
+                                              1
+                                             when oldandinfirm in
+                                                  (838, 839, 840, 841, 842) and
+                                                  workability = 222 then
+                                              1
+                                             when student in (843, 844, 845) then
+                                              1
+                                             else
+                                              0
+                                           end)) saltype,
+                                       count(1) as cnt
+                                  from info_t_member mem where 1=1 and mem.family_id=#familyId#
+                                 group by mem.family_id) inf
+                         where inf.family_id = #familyId#) 
+		WHERE fam.family_id=#familyId#
+	</update>
+	<update id="updateFamily" parameterClass="InfoTFamily">
+		UPDATE INFO_T_FAMILY
+		SET
+		ORGANIZATION_ID = #organizationId#,
+		FAMILYNO =#familyno#,
+		POPULATION=#population#,
+		MASTERNAME = #mastername#,
+		ENSURECOUNT =
+		#ensurecount#,
+		MASTERID = #masterid#,
+		ASSETWORTH =#assetworth#,
+		CONSULTINCOME =#consultincome#,
+		MASTERPAPERTYPE =#masterpapertype#,
+		MASTERPAPERID = #masterpaperid#,
+		RPRADDRESS =#rpraddress#,
+		FAMADDRESS =
+		#famaddress#,
+		LINKMODE = #linkmode#,
+		STATUS =#status#,
+		AVGINCOME =
+		#avgincome#,
+		MALCONDITION =#malcondition#,
+		ONLYCHILD = #onlychild#,
+		ALLPAYOUT = #allpayout#
+		WHERE
+		FAMILY_ID = #familyId#
+	</update>
+	<insert id="insertFamily" parameterClass="InfoTFamily">
+		<selectKey resultClass="int" keyProperty="familyId" type="pre">
+			SELECT hibernate_sequence.nextval AS familyId FROM DUAL
+		</selectKey>
+		INSERT INTO INFO_T_FAMILY
+		(FAMILY_ID,ORGANIZATION_ID,
+		POPULATION,
+		MASTERNAME,
+		ENSURECOUNT,
+		MASTERID, ASSETWORTH,
+		CONSULTINCOME,
+		MASTERPAPERTYPE,
+		MASTERPAPERID, RPRADDRESS, FAMADDRESS,
+		LINKMODE,
+		STATUS, AVGINCOME,
+		MALCONDITION, ONLYCHILD, ALLPAYOUT)
+		VALUES
+		(
+		#familyId#,#organizationId#,
+		#population#,
+		#mastername#,
+		#ensurecount#,
+		#masterid#,#assetworth#,
+		#consultincome#,
+		#masterpapertype#,#masterpaperid#, #rpraddress#,
+		#famaddress#,
+		#linkmode#, #status#, #avgincome#, #malcondition#,
+		#onlychild#,
+		#allpayout#)
+	</insert>
+	<delete id="deleteFamilyById" parameterClass="int">
+		DELETE
+		INFO_T_FAMILY
+		WHERE FAMILY_ID = #familyId#
+  </delete>
+	<update id="updateByPrimaryKeySelective" parameterClass="com.mingda.common.ibatis.data.InfoTFamily">
+		update INFO_T_FAMILY
+		<dynamic prepend="set">
+			<isNotNull prepend="," property="organizationId">
+				ORGANIZATION_ID =
+				#organizationId:VARCHAR#
+      </isNotNull>
+			<isNotNull prepend="," property="familyno">
+				FAMILYNO =
+				#familyno:VARCHAR#
+      </isNotNull>
+			<isNotNull prepend="," property="population">
+				POPULATION =
+				#population:VARCHAR#
+      </isNotNull>
+			<isNotNull prepend="," property="mastername">
+				MASTERNAME =
+				#mastername:OTHER#
+      </isNotNull>
+			<isNotNull prepend="," property="ensurecount">
+				ENSURECOUNT =
+				#ensurecount:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="masterid">
+				MASTERID =
+				#masterid:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="assetworth">
+				ASSETWORTH =
+				#assetworth:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="consultincome">
+				CONSULTINCOME =
+				#consultincome:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="masterpapertype">
+				MASTERPAPERTYPE =
+				#masterpapertype:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="masterpaperid">
+				MASTERPAPERID =
+				#masterpaperid:OTHER#
+      </isNotNull>
+			<isNotNull prepend="," property="rpraddress">
+				RPRADDRESS =
+				#rpraddress:OTHER#
+      </isNotNull>
+			<isNotNull prepend="," property="famaddress">
+				FAMADDRESS =
+				#famaddress:OTHER#
+      </isNotNull>
+			<isNotNull prepend="," property="linkmode">
+				LINKMODE = #linkmode:OTHER#
+			</isNotNull>
+			<isNotNull prepend="," property="status">
+				STATUS = #status:CHAR#
+			</isNotNull>
+			<isNotNull prepend="," property="avgincome">
+				AVGINCOME =
+				#avgincome:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="malcondition">
+				MALCONDITION =
+				#malcondition:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="onlychild">
+				ONLYCHILD =
+				#onlychild:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="allpayout">
+				ALLPAYOUT =
+				#allpayout:DECIMAL#
+      </isNotNull>
+			<isNotNull prepend="," property="tohtml">
+				TOHTML = #tohtml:VARCHAR#
+			</isNotNull>
+		</dynamic>
+		where FAMILY_ID = #familyId:DECIMAL#
+	</update>
+</sqlMap>

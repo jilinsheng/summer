@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+                               "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans/>
+ <global-exceptions/>
+ <global-forwards/>
+ <action-mappings>
+  <action path="/page/policy/manage/policycheckideafamily" type="com.mingda.action.policy.check.PolicycheckideafamilyAction"/>
+  <action path="/page/policy/manage/policycheckideamember" type="com.mingda.action.policy.check.PolicycheckideamemberAction"/>
+  <action path="/page/policy/manage/policycheckidea" type="com.mingda.action.policy.check.PolicycheckideaAction"/>
+  <action path="/page/policy/manage/policycheckmanage" type="com.mingda.action.policy.check.PolicycheckmanageAction"/>
+  <action path="/page/policy/info/policyinfoedit" type="com.mingda.action.policy.info.PolicyinfoeditAction"/>
+  <action path="/page/policy/info/policyinfoquery" type="com.mingda.action.policy.info.PolicyinfoqueryAction"/>
+  <action path="/page/policy/acc/policyaccedit" type="com.mingda.action.policy.acc.PolicyacceditAction"/>
+  <action path="/page/policy/acc/policyaccquery" type="com.mingda.action.policy.acc.PolicyaccqueryAction"/>
+  <action path="/page/policy/approval/policycheckpage" type="com.mingda.action.policy.approval.PolicycheckpageAction"/>
+  <action path="/page/policy/relief/relieflist" type="com.mingda.action.policy.relief.RelieflistAction"/>
+  <action path="/page/policy/account/accountpage" type="com.mingda.action.policy.account.AccountpageAction"/>
+  <action path="/page/policy/approvalidea/policyideapage" type="com.mingda.action.policy.approvalidea.PolicyideapageAction"/>
+  <action path="/page/policy/export/exportmanage" type="com.mingda.action.policy.export.ExportmanageAction">
+   <forward name="exportmanage" path="/page/policy/export/exportmanage.do"/>
+  </action>
+  <action path="/page/query/querypage" type="com.mingda.action.query.QuerypageAction"/>
+ </action-mappings>
+ <controller/>
+</struts-config>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB2312" ?>
+
+<!-- 数巨报表多项目配置文件，此配置文件可以配置多个报表项目 -->
+    
+<MaxReportsProjects DisplayName="报表多项目配置文件" Sysversion="31">
+   
+<!--    
+     项目指数巨报表设计器内建立的项目。  
+     
+     项目配置范例  
+     <MaxProject ProjectName="reportdemo" ProjectDisplayName="数巨报表示例" ProjectPathType="0" ProjectPath="C:/MaxReport/reportdemo/" >
+      <ProjectDesc>炎鼎软件示例报表项目</ProjectDesc>
+     </MaxProject>
+     以上代码表示配置了一个报表项目，如有多个项目则配置多个MaxProject标签。
+     
+     下面对MaxProject标签内各个元素的含义做说明：
+     ProjectName     : 指定报表项目的项目名称 即在设计器内新建项目的英文名称（项目文件名称）
+     ProjectDisplayName : 显示名称，可以之一个简单的说明信息
+     ProjectPathType : 设置ProjectPath的路径是绝对路径还是相对路径
+                       0 ：绝对路径，报表项目的绝对路径。
+                       1 ：相对路径，针对你的WEB项目的相对路径
+     ProjectPath     : 报表项目基本路径，即包含 .ydr 文件的目录   
+                       根据 ProjectPathType 的设置这里填写对应的目录      
+                       如果 ProjectPathType="0" 举例 Windows下：C:/MaxReport/reportdemo/  Unix下：/home/maxreport/reportdemo/
+                       如果 ProjectPathType="1" 举例 http://www.maxrpt.com/ccsw/sysreport/reportdemo/ 或者 /sysreport/reportdemo
+ -->
+     <MaxProject ProjectName="paperprint" ProjectDisplayName="证件打印" ProjectPathType="1" ProjectPath="/page/paperprint/paperprint" >
+      <ProjectDesc>证件打印</ProjectDesc>
+     </MaxProject>
+</MaxReportsProjects>

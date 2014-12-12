@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE component-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "tiles-config_1_1.dtd" >
+<component-definitions>
+  <definition name="mainmenu" page="/page/info/family/familySave.jsp">
+  	<put name="familyinfo" value="/page/readMenu.do" type="page"/>
+  </definition>
+</component-definitions>

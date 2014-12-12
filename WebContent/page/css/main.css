@@ -1,0 +1,18 @@
+@CHARSET "GB18030";
+body {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	background-color: #EE7C6B;
+}
+
+body,td,th {
+	font-size: 9px;
+}
+
+.vplace {
+	position: absolute;
+	top:50%;
+	left: 0px;
+	overflow: hidden;
+}

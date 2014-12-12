@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+                               "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="loginForm" type="com.mingda.form.LoginForm" />
+		<form-bean name="familyQueryForm"
+			type="com.mingda.form.info.search.FamilyQueryForm" />
+		<form-bean name="uploadForm" type="com.mingda.form.UploadForm" />
+		<form-bean name="changemasterForm"
+			type="com.mingda.form.info.alteration.ChangemasterForm" />
+		<form-bean name="uploadpicForm" type="com.mingda.form.UploadPicActionForm" />
+		<form-bean name="mutilUploadForm" type="com.mingda.form.info.MutilUploadForm" />
+	</form-beans>
+	<global-exceptions />
+	<global-forwards>
+		<forward name="error" path="/page/common/error.jsp" redirect="true" />
+	</global-forwards>
+	<action-mappings>
+		<action parameter="mainmenu" path="/page/mainmenu"
+			type="org.apache.struts.actions.ForwardAction" />
+		<action attribute="loginForm" input="/login.jsp" name="loginForm"
+			path="/login" scope="request" type="com.mingda.action.LoginAction">
+			<forward name="index" path="/page/index.jsp" redirect="true" />
+			<forward name="login" path="/login.jsp" redirect="true" />
+		</action>
+		<action path="/page/readMenu" type="com.mingda.action.ReadMenuAction">
+			<forward name="menutree" path="/page/menutree.jsp" />
+			<forward name="menud" path="/page/menud.jsp" />
+			<forward name="menunew" path="/page/menunew.jsp" />
+		</action>
+		<action path="/page/readSubMenu" type="com.mingda.action.ReadSubMenuAction">
+			<forward name="submenu" path="/page/submenu.jsp" />
+		</action>
+		<action path="/page/system/organizationInit" type="com.mingda.action.system.OrganizationInitAction">
+			<forward name="organization" path="/page/system/organization.jsp" />
+		</action>
+		<action path="/page/system/organizationGetChild"
+			type="com.mingda.action.system.OrganizationGetChildAction" />
+		<action attribute="familyQueryForm" input="/page/info/search/familyquery.jsp"
+			name="familyQueryForm" path="/page/info/search/familyQuery" scope="request"
+			type="com.mingda.action.info.search.FamilyQueryAction">
+			<forward name="familyquery" path="/page/info/search/familyquery.jsp" />
+		</action>
+		<action attribute="familyQueryForm" name="familyQueryForm"
+			path="/page/info/infoinit" scope="request"
+			type="com.mingda.action.info.InfoinitAction">
+			<forward name="familyinfo" path="/page/info/familyinfo.jsp" />
+		</action>
+		<action path="/page/info/infoGeFamily" type="com.mingda.action.info.InfoGeFamilyAction" />
+		<action path="/page/querymanage/infoqueryresult"
+			type="com.mingda.action.querymanage.InfoqueryresultAction">
+			<forward name="infoqueryresult" path="/page/querymanage/infoqueryresult.jsp" />
+		</action>
+		<action path="/page/querymanage/infoqueryresultgetchild"
+			type="com.mingda.action.querymanage.InfoqueryresultgetchildAction" />
+		<action path="/page/info/card/familyinfocard" type="com.mingda.action.info.card.FamilyinfocardAction">
+			<forward name="familyinfocard" path="/page/info/card/familyinfocard.jsp" />
+		</action>
+		<action path="/page/info/editor/editorInfoCardTree"
+			type="com.mingda.action.info.editor.EditorInfoCardTreeAction" />
+		<action path="/page/info/editor/editorInfoCardTrees"
+			type="com.mingda.action.info.editor.EditorInfoCardTreesAction">
+			<forward name="editorFrameset" path="/page/info/editor/editorFrameset.jsp" />
+		</action>
+		<action path="/page/info/editor/editorInfoCardLeaf"
+			type="com.mingda.action.info.editor.EditorInfoCardLeafAction" />
+		<action path="/page/info/card/familyInfoCardTree"
+			type="com.mingda.action.info.card.FamilyInfoCardTreeAction" />
+		<action path="/page/info/card/familyInfoCardLeaf"
+			type="com.mingda.action.info.card.FamilyInfoCardLeafAction" />
+		<action path="/page/info/card/familyInfoCardTrees"
+			type="com.mingda.action.info.card.FamilyInfoCardTreesAction" />
+		<action path="/page/info/card/memberInfoCardTree"
+			type="com.mingda.action.info.card.MemberInfoCardTreeAction" />
+		<action path="/page/info/card/memberInfoCardLeaf"
+			type="com.mingda.action.info.card.MemberInfoCardLeafAction" />
+		<action path="/page/info/card/memberInfoCardTrees"
+			type="com.mingda.action.info.card.MemberInfoCardTreesAction" />
+		<action path="/page/info/editor/infoFormInit" type="com.mingda.action.info.editor.InfoFormInitAction">
+			<forward name="infoeditor" path="/page/info/editor/infoeditor.jsp" />
+		</action>
+		<action path="/page/info/editor/infoFormSave" type="com.mingda.action.info.editor.InfoFormSaveAction">
+			<forward name="familyinfocard" path="/page/info/card/familyinfocard.do" />
+		</action>
+		<action path="/page/info/card/getMemberPic" type="com.mingda.action.info.card.GetMemberPicAction" />
+		<action path="/page/info/card/getMemberBase" type="com.mingda.action.info.card.GetMemberBaseAction" />
+		<action path="/page/info/card/getMemberClass" type="com.mingda.action.info.card.GetMemberClassAction" />
+		<action path="/page/info/editor/infoEntityList"
+			type="com.mingda.action.info.editor.InfoEntityListAction">
+			<forward name="infoentitylist" path="/page/info/editor/infoentitylist.jsp" />
+		</action>
+		<action path="/page/info/card/getCurrentList" type="com.mingda.action.info.card.GetCurrentListAction" />
+		<action path="/page/info/editor/addFamilyBase"
+			type="com.mingda.action.info.editor.AddFamilyBaseAction">
+			<forward name="familysave" path="/page/info/editor/familysave.jsp" />
+		</action>
+		<action path="/page/info/editor/editorGetNodeList"
+			type="com.mingda.action.info.editor.EditorGetNodeListAction" />
+		<action path="/page/info/editor/addNodeInfo" type="com.mingda.action.info.editor.AddNodeInfoAction" />
+		<action path="/page/info/editor/refreshClass" type="com.mingda.action.info.editor.RefreshClassAction" />
+		<action path="/page/info/editor/editorquery" type="com.mingda.action.info.editor.EditorqueryAction">
+			<forward name="familylist" path="/page/info/editor/familylist.jsp" />
+			<forward name="familysave" path="/page/info/editor/addFamilyBase.do" />
+		</action>
+		<action path="/page/info/editor/uploadinit" type="com.mingda.action.info.editor.UploadinitAction">
+			<forward name="upload" path="/page/info/editor/upload.jsp" />
+		</action>
+		<action attribute="uploadForm" name="uploadForm" path="/page/info/editor/upload"
+			scope="request" type="com.mingda.action.info.editor.UploadAction">
+			<forward name="result" path="/page/info/editor/result.jsp" />
+		</action>
+		<action attribute="uploadForm" name="uploadForm"
+			path="/page/info/editor/inchsave" scope="request"
+			type="com.mingda.action.info.editor.InchsaveAction">
+			<forward name="inch" path="/page/info/editor/inch.jsp" />
+		</action>
+		<action attribute="changemasterForm" input="/page/info/alteration/changemaster.jsp"
+			name="changemasterForm" path="/page/info/alteration/changemaster"
+			scope="request" type="com.mingda.action.info.alteration.ChangemasterAction">
+			<forward name="changemasterresult" path="/page/info/alteration/changemasterresult.jsp" />
+		</action>
+		<action path="/page/info/alteration/changemasterinit"
+			type="com.mingda.action.info.alteration.ChangeMasterinitAction">
+			<forward name="changemaster" path="/page/info/alteration/changemaster.jsp" />
+		</action>
+		<action path="/page/info/card/getCurrentListout"
+			type="com.mingda.action.info.card.GetCurrentListoutAction">
+			<forward name="showchild" path="/page/info/card/showchild.jsp" />
+		</action>
+		<action path="/page/info/card/refreshclass" type="com.mingda.action.info.card.RefreshclassAction" />
+		<action path="/page/info/editor/deleteNode" type="com.mingda.action.info.editor.DeleteNodeAction" />
+		<action path="/page/info/card/view" type="com.mingda.action.ViewAction">
+			<forward name="view" path="/page/info/card/view.jsp" />
+		</action>
+		<action path="/loginout" type="com.mingda.action.LoginoutAction">
+			<forward name="login" path="/login.jsp" />
+		</action>
+		<action path="/page/info/card/getOper" type="com.mingda.action.info.card.GetOperAction" />
+		<action path="/page/info/card/newfamilyinfocard"
+			type="com.mingda.action.info.card.NewfamilyinfocardAction">
+			<forward name="newfamilyinfocard" path="/page/info/card/newfamilyinfocard.jsp" />
+		</action>
+		<action path="/page/info/card/newfamilyinfocard1"
+			type="com.mingda.action.info.card.NewfamilyinfocardAction1">
+			<forward name="newfamilyinfocard" path="/page/info/card/newfamilyinfocard.jsp" />
+		</action>
+		<action path="/page/info/card/newviewchild" type="com.mingda.action.info.card.NewviewchildAction">
+			<forward name="newviewchild" path="/page/info/card/newviewchild.jsp" />
+		</action>
+		<action path="/page/info/card/newchildlist" type="com.mingda.action.info.card.NewchildlistAction">
+			<forward name="newchildlist" path="/page/info/card/newchildlist.jsp" />
+		</action>
+		<action path="/page/system/refclassinit" type="com.mingda.action.system.RefclassinitAction">
+			<forward name="refclass" path="/page/system/refclass.jsp" />
+		</action>
+		<action path="/page/system/refclasssave" type="com.mingda.action.system.RefclasssaveAction">
+			<forward name="refclassinit" path="/page/system/refclassinit.do" />
+		</action>
+		<action path="/page/system/dictionary/dictsortinit"
+			type="com.mingda.action.system.dictionary.DictsortinitAction">
+			<forward name="dictsort" path="/page/system/dictionary/dictsort.jsp" />
+		</action>
+		<action path="/page/system/dictionary/dictvalueinit"
+			type="com.mingda.action.system.dictionary.DictvalueinitAction">
+			<forward name="dictvalue" path="/page/system/dictionary/dictvalue.jsp" />
+		</action>
+		<action path="/page/system/dictionary/dicthandle"
+			type="com.mingda.action.system.dictionary.DicthandleAction" />
+		<action path="/page/info/editor/idcarditerance"
+			type="com.mingda.action.info.editor.IdcarditeranceAction" />
+		<action path="/page/system/employeelist" type="com.mingda.action.system.EmployeelistAction">
+			<forward name="employee" path="/page/system/employee.jsp" />
+		</action>
+		<action path="/page/system/syslog/syslogtable"
+			type="com.mingda.action.system.syslog.SyslogtableAction">
+			<forward name="syslogtable" path="/page/system/syslog/syslogtable.jsp" />
+		</action>
+		<action path="/page/system/syslog/syslogtableTree"
+			type="com.mingda.action.system.syslog.SyslogtableTreeAction" />
+		<action path="/page/system/syslog/syslogview" type="com.mingda.action.system.syslog.SyslogviewAction">
+			<forward name="syslogview" path="/page/system/syslog/syslogview.jsp" />
+		</action>
+		<action path="/page/system/employeeinit" type="com.mingda.action.system.EmployeeinitAction" />
+		<action path="/page/system/resetpwd" type="com.mingda.action.system.ResetpwdAction" />
+		<action path="/page/system/employeesave" type="com.mingda.action.system.EmployeesaveAction" />
+		<action path="/page/system/checkaccount" type="com.mingda.action.system.CheckaccountAction" />
+		<action path="/page/info/remove/removefamily" type="com.mingda.action.info.remove.RemovefamilyAction" />
+		<action path="/page/system/rolelist" type="com.mingda.action.system.RolelistAction">
+			<forward name="role" path="/page/system/role.jsp" />
+		</action>
+		<action path="/page/system/rolesave" type="com.mingda.action.system.RolesaveAction" />
+		<action path="/page/system/roleinit" type="com.mingda.action.system.RoleinitAction">
+			<forward name="roleright" path="/page/system/rolemain.jsp" />
+		</action>
+		<action path="/page/system/role" type="com.mingda.action.system.RoleAction" />
+		<action path="/page/system/roleonesave" type="com.mingda.action.system.RoleonesaveAction" />
+		<action path="/page/info/move/moveinternal" type="com.mingda.action.info.move.MoveinternalAction">
+			<forward name="moveinternal" path="/page/info/move/moveinternal.jsp" />
+		</action>
+		<action path="/page/info/move/moveinternalinit"
+			type="com.mingda.action.info.move.MoveinternalinitAction">
+			<forward name="moveinternal" path="/page/info/move/moveinternal.jsp" />
+		</action>
+		<action path="/page/info/move/readnextorg" type="com.mingda.action.info.move.ReadnextorgAction" />
+		<action path="/page/info/move/readnextorg1" type="com.mingda.action.info.move.Readnextorg1Action" />
+		<action path="/page/info/move/moveexternaloutinit"
+			type="com.mingda.action.info.move.MoveexternaloutinitAction">
+			<forward name="moveexternalout" path="/page/info/move/moveexternalout.jsp" />
+		</action>
+		<action path="/page/info/move/moveexternalout"
+			type="com.mingda.action.info.move.MoveexternaloutAction" />
+		<action path="/page/info/move/moveexternalinquery"
+			type="com.mingda.action.info.move.MoveexternalinqueryAction">
+			<forward name="moveexternalinquery" path="/page/info/move/moveexternalinquery.jsp" />
+		</action>
+		<action path="/page/system/modipassword" type="com.mingda.action.system.ModipasswordAction" />
+		<action path="/page/info/move/moveexternalininit"
+			type="com.mingda.action.info.move.MoveexternalininitAction">
+			<forward name="moveexternalin" path="/page/info/move/moveexternalin.jsp" />
+		</action>
+		<action path="/page/info/move/moveexternalin" type="com.mingda.action.info.move.MoveexternalinAction">
+			<forward name="moveexternalin" path="/page/info/move/moveexternalin.jsp" />
+		</action>
+		<action path="/page/system/checkoldpwd" type="com.mingda.action.system.CheckoldpwdAction" />
+		<action path="/page/system/personinfoinit" type="com.mingda.action.system.PersoninfoinitAction">
+			<forward name="personinfo" path="/page/system/personinfo.jsp" />
+		</action>
+		<action path="/page/system/personinfo" type="com.mingda.action.system.PersoninfoAction">
+			<forward name="personinfoinit" path="/page/system/personinfo.do" />
+		</action>
+		<action path="/page/system/mysyslog" type="com.mingda.action.system.MysyslogAction">
+			<forward name="mylog" path="/page/system/mylog.jsp" />
+		</action>
+		<action path="/page/info/infolog/infologqueryinit"
+			type="com.mingda.action.info.infolog.InfologqueryinitAction">
+			<forward name="infologquery" path="/page/info/infolog/infologquery.jsp" />
+		</action>
+		<action path="/page/info/infolog/infologquery"
+			type="com.mingda.action.info.infolog.InfologqueryAction">
+			<forward name="infologquery" path="/page/info/infolog/infologquery.jsp" />
+		</action>
+		<action path="/page/info/infolog/infologview" type="com.mingda.action.info.infolog.InfologviewAction">
+			<forward name="infologview" path="/page/info/infolog/infologview.jsp" />
+		</action>
+		<action path="/page/system/unit/unitquery" type="com.mingda.action.system.unit.UnitqueryAction">
+			<forward name="unitquery" path="/page/system/unit/unitquery.jsp" />
+		</action>
+		<action path="/page/system/unit/unitsave" type="com.mingda.action.system.unit.UnitsaveAction">
+			<forward name="unit" path="/page/system/unit/unit.jsp" />
+		</action>
+		<action path="/page/oa/writemsg" type="com.mingda.action.oa.WritemsgAction" />
+		<action path="/page/system/exportfile/exportExcel"
+			type="com.mingda.action.system.exportfile.ExportExcelAction" />
+		<action path="/page/system/unit/checkunit" type="com.mingda.action.system.unit.CheckunitAction" />
+		<action path="/page/system/unit/unitsaveinit" type="com.mingda.action.system.unit.UnitsaveinitAction">
+			<forward name="unitquery" path="/page/system/unit/unitquery.jsp" />
+		</action>
+		<action path="/page/system/menu/menutree" type="com.mingda.action.system.menu.MenutreeAction">
+			<forward name="menutree" path="/page/system/menu/menutree.jsp" />
+		</action>
+		<action path="/page/system/menu/menuinit" type="com.mingda.action.system.menu.MenuinitAction">
+			<forward name="menuedit" path="/page/system/menu/menuedit.jsp" />
+		</action>
+		<action path="/page/system/menu/menusave" type="com.mingda.action.system.menu.MenusaveAction">
+			<forward name="menuedit" path="/page/system/menu/menuedit.jsp"
+				redirect="true" />
+		</action>
+		<action path="/page/infovalidate/infovalidatequery"
+			type="com.mingda.action.infovalidate.InfovalidatequeryAction">
+			<forward name="infovalidatequery" path="/page/infovalidate/infovalidatequery.jsp" />
+		</action>
+		<action path="/page/infovalidate/validateterm"
+			type="com.mingda.action.infovalidate.ValidatetermAction">
+			<forward name="validateterm" path="/page/infovalidate/validateterm.jsp" />
+		</action>
+		<action path="/page/infovalidate/validateexecute"
+			type="com.mingda.action.infovalidate.ValidateexecuteAction" />
+		<action path="/page/system/menu/menuchild" type="com.mingda.action.system.menu.MenuchildAction">
+			<forward name="menuchild" path="/page/system/menu/menuchild.jsp" />
+		</action>
+		<action path="/page/system/menu/menuchildsave"
+			type="com.mingda.action.system.menu.MenuchildsaveAction" />
+		<action path="/page/organ/organinit" type="com.mingda.action.organ.OrganinitAction">
+			<forward name="organ" path="/page/organ/organ.jsp" />
+		</action>
+		<action path="/page/organ/organsave" type="com.mingda.action.organ.OrgansaveAction">
+			<forward name="error" path="/page/organ/error.jsp" />
+		</action>
+		<action path="/page/organ/organstopinit" type="com.mingda.action.organ.OrganstopinitAction">
+			<forward name="organstop" path="/page/organ/organstop.jsp" />
+		</action>
+		<action path="/viewpic" type="com.mingda.action.ViewpicAction">
+			<forward name="viewpic" path="/page/info/viewpic.jsp" />
+		</action>
+		<action path="/page/implemention/interfacedefineinit"
+			type="com.mingda.action.implemention.InterfacedefineinitAction">
+			<forward name="interfacedefine" path="/page/implemention/interfacedefine.jsp" />
+		</action>
+		<action path="/page/implemention/interfacedefineview"
+			type="com.mingda.action.implemention.InterfacedefineviewAction" />
+		<action path="/page/implemention/interfacedefinesave"
+			type="com.mingda.action.implemention.InterfacedefinesaveAction" />
+		<action path="/page/implemention/billcreateinit"
+			type="com.mingda.action.implemention.BillcreateinitAction">
+			<forward contextRelative="true" name="billcreate"
+				path="/page/implemention/billcreate.jsp" />
+		</action>
+		<action path="/page/implemention/billmonthsave"
+			type="com.mingda.action.implemention.BillmonthsaveAction">
+			<forward name="result" path="/page/implemention/billcreateinit.do"
+				redirect="true" />
+			<forward name="error" path="/page/common/error.jsp" />
+		</action>
+		<action path="/page/implemention/billmonthdel"
+			type="com.mingda.action.implemention.BillmonthdelAction" />
+		<action path="/page/implemention/billcreatefileview"
+			type="com.mingda.action.implemention.BillcreatefileviewAction">
+			<forward name="billcreatefile" path="/page/implemention/billcreatefile.jsp" />
+		</action>
+		<action path="/page/implemention/billcreatefile"
+			type="com.mingda.action.implemention.BillcreatefileAction" />
+		<action path="/page/implemention/billctreatfilepriview"
+			type="com.mingda.action.implemention.BillctreatfilepriviewAction">
+			<forward name="billcreatefilepriview" path="/page/implemention/billcreatefilepriview.jsp" />
+		</action>
+		<action path="/page/organ/organamalgamateinit"
+			type="com.mingda.action.organ.OrganamalgamateinitAction">
+			<forward name="organamalgamate" path="/page/organ/organamalgamate.jsp" />
+		</action>
+		<action path="/page/organ/organgetchilds" type="com.mingda.action.organ.OrgangetchildsAction" />
+		<action path="/page/organ/organfindbylevel" type="com.mingda.action.organ.OrganfindbylevelAction" />
+		<action path="/page/organ/organfindchildlevel"
+			type="com.mingda.action.organ.OrganfindchildlevelAction" />
+		<action path="/page/organ/organedit" type="com.mingda.action.organ.OrganeditAction">
+			<forward name="organinfo" path="/page/organ/organinfo.jsp" />
+			<forward name="error" path="/page/organ/error.jsp" />
+		</action>
+		<action path="/page/organ/organdetail" type="com.mingda.action.organ.OrgandetailAction">
+			<forward name="organdetail" path="/page/organ/organdetail.jsp" />
+		</action>
+		<action path="/page/implemention/implementionmonthquery"
+			type="com.mingda.action.implemention.ImplementionmonthqueryAction">
+			<forward name="implementionmonthquery" path="/page/implemention/implementionmonthquery.jsp" />
+		</action>
+		<action path="/page/implemention/implementionmonthqueryinit"
+			type="com.mingda.action.implemention.ImplementionmonthqueryinitAction">
+			<forward name="implementionmonthquery" path="/page/implemention/implementionmonthquery.jsp" />
+		</action>
+		<action path="/page/info/undo/removefamilyundo"
+			type="com.mingda.action.info.undo.RemovefamilyundoAction">
+			<forward name="removefamilyundo" path="/page/info/undo/removefamilyundo.jsp" />
+		</action>
+		<action path="/page/info/undo/removefamilyquery"
+			type="com.mingda.action.info.undo.RemovefamilyqueryAction">
+			<forward name="removefamilyquery" path="/page/info/undo/removefamilyquery.jsp" />
+		</action>
+		<action path="/page/organ/organstop" type="com.mingda.action.organ.OrganstopAction" />
+		<action path="/page/info/undo/moveoutundoquery"
+			type="com.mingda.action.info.undo.MoveoutundoqueryAction">
+			<forward name="moveoutundoquery" path="/page/info/undo/moveoutundoquery.jsp" />
+		</action>
+		<action path="/page/info/undo/moveoutundo" type="com.mingda.action.info.undo.MoveoutundoAction">
+			<forward name="moveoutundo" path="/page/info/undo/moveoutundo.jsp" />
+		</action>
+		<action path="/page/organ/organeditundoinit" type="com.mingda.action.organ.OrganeditundoinitAction">
+			<forward name="organeditcommit" path="/page/organ/organeditcommit.jsp" />
+			<forward name="organundoedit" path="/page/organ/organundoedit.jsp" />
+		</action>
+		<action path="/page/organ/organeditcommit" type="com.mingda.action.organ.OrganeditcommitAction">
+			<forward name="organinfo" path="/page/organ/organinfo.jsp" />
+		</action>
+		<action path="/page/organ/organeditcommitinit"
+			type="com.mingda.action.organ.OrganeditcommitinitAction">
+			<forward name="organeditcommit" path="/page/organ/organeditcommit.jsp" />
+		</action>
+		<action path="/page/info/synthesis/synthesisquerycreate"
+			type="com.mingda.action.info.synthesis.SynthesisquerycreateAction" />
+		<action path="/page/info/synthesis/synthesisquerycreateinit"
+			type="com.mingda.action.info.synthesis.SynthesisquerycreateinitAction">
+			<forward name="synthesisquerycreate" path="/page/info/synthesis/synthesisquerycreate.jsp" />
+		</action>
+		<action path="/page/info/synthesis/findtablechild"
+			type="com.mingda.action.info.synthesis.FindtablechildAction" />
+		<action path="/page/info/synthesis/residentquery"
+			type="com.mingda.action.info.synthesis.ResidentqueryAction">
+			<forward name="residentquery" path="/page/info/synthesis/residentquery.jsp" />
+		</action>
+		<action path="/page/info/synthesis/residentdict"
+			type="com.mingda.action.info.synthesis.ResidentdictAction" />
+		<action path="/page/info/move/movehistoryquery"
+			type="com.mingda.action.info.move.MovehistoryqueryAction">
+			<forward name="movehistoryquery" path="/page/info/move/movehistoryquery.jsp" />
+		</action>
+		<action path="/page/implemention/currentmonthdetails"
+			type="com.mingda.action.implemention.CurrentmonthdetailsAction">
+			<forward name="currentmonthdetails" path="currentmonthdetails" />
+		</action>
+		<action path="/page/oa/noticeview" type="com.mingda.action.oa.NoticeviewAction">
+			<forward name="noticeview" path="/page/oa/noticeview.jsp" />
+		</action>
+		<action path="/page/oa/noticeviewinit" type="com.mingda.action.oa.NoticeviewinitAction">
+			<forward name="noticeview" path="/page/oa/noticeview.jsp" />
+		</action>
+		<action path="/page/oa/noticemanage" type="com.mingda.action.oa.NoticemanageAction" />
+		<action path="/page/oa/noticemanagequery" type="com.mingda.action.oa.NoticemanagequeryAction">
+			<forward name="noticemanagequery" path="/page/oa/noticemanagequery.jsp" />
+		</action>
+		<action path="/page/oa/oafileview" type="com.mingda.action.oa.OafileviewAction" />
+		<action path="/page/oa/noticebrowser" type="com.mingda.action.oa.NoticebrowserAction">
+			<forward name="noticebrowser" path="/page/oa/noticebrowser.jsp" />
+		</action>
+		<action path="/page/oa/recpit" type="com.mingda.action.oa.RecpitAction" />
+		<action path="/page/oa/announcementview" type="com.mingda.action.oa.AnnouncementviewAction" />
+		<action path="/page/oa/announcementquery" type="com.mingda.action.oa.AnnouncementqueryAction">
+			<forward name="announcementmanagequery" path="/page/oa/announcementmanagequery.jsp" />
+		</action>
+		<action path="/page/oa/announcmentbrowser" type="com.mingda.action.oa.AnnouncmentbrowserAction">
+			<forward name="announcementbrowser" path="/page/oa/announcementbrowser.jsp" />
+		</action>
+		<action path="/page/oa/announcementmanage" type="com.mingda.action.oa.AnnouncementmanageAction" />
+		<action path="/page/oa/welcome" type="com.mingda.action.oa.WelcomeAction">
+			<forward name="welcome" path="/page/welcome.jsp" />
+		</action>
+		<action path="/page/oa/noticedetail" type="com.mingda.action.oa.NoticedetailAction">
+			<forward name="noticedetail" path="/page/oa/noticedetail.jsp" />
+		</action>
+		<action path="/page/oa/transferview" type="com.mingda.action.oa.TransferviewAction" />
+		<action path="/page/oa/getChilds" type="com.mingda.action.oa.GetChildsAction" />
+		<action path="/page/oa/getEmployees" type="com.mingda.action.oa.GetEmployeesAction" />
+		<action path="/page/oa/transferquery" type="com.mingda.action.oa.TransferqueryAction">
+			<forward name="transferquery" path="/page/oa/transferquery.jsp" />
+		</action>
+		<action path="/page/oa/transferbrowser" type="com.mingda.action.oa.TransferbrowserAction">
+			<forward name="transferbrowser" path="/page/oa/transferbrowser.jsp" />
+		</action>
+		<action path="/page/oa/transfermanage" type="com.mingda.action.oa.TransfermanageAction">
+			<forward name="transfermanage" path="/page/oa/transfermanage.jsp" />
+		</action>
+		<action path="/page/oa/transferrecequery" type="com.mingda.action.oa.TransferrecequeryAction">
+			<forward name="transferrecequery" path="/page/oa/transferrecequery.jsp" />
+		</action>
+		<action path="/page/paperprint/paperprint" type="com.mingda.action.paperprint.PaperprintAction">
+			<forward name="paperprint" path="/page/paperprint/paperprint.jsp" />
+		</action>
+		<action path="/page/paperprint/printpaperpreivew"
+			type="com.mingda.action.paperprint.PrintpaperpreivewAction">
+			<forward name="paperprintpreiview" path="/page/paperprint/paperprintpreiview.jsp" />
+		</action>
+		<action path="/page/paperprint/printpaperhandle"
+			type="com.mingda.action.paperprint.PrintpaperhandleAction" />
+		<action path="/page/paperprint/printpaperbrowse"
+			type="com.mingda.action.paperprint.PrintpaperbrowseAction">
+			<forward name="paperprintbrowse" path="/page/paperprint/paperprintbrowse.jsp" />
+		</action>
+		<action path="/page/paperprint/paperprintredo"
+			type="com.mingda.action.paperprint.PaperprintredoAction">
+			<forward name="paperprintredo" path="/page/paperprint/paperprintredo.jsp" />
+		</action>
+		<action path="/page/paperprint/paperprintredohandle"
+			type="com.mingda.action.paperprint.PaperprintredohandleAction" />
+		<action path="/page/paperprint/papervaliquery"
+			type="com.mingda.action.paperprint.PapervaliqueryAction">
+			<forward name="papervaliquery" path="/page/paperprint/papervaliquery.jsp" />
+		</action>
+		<action path="/page/policy/query/queryPolicyFamilyinit"
+			type="com.mingda.action.policy.query.QueryPolicyFamilyinitAction">
+			<forward name="querypolicyfamily" path="/page/policy/query/querypolicyfamily.jsp" />
+		</action>
+		<action path="/page/policy/query/queryPolicyFamily"
+			type="com.mingda.action.policy.query.QueryPolicyFamilyAction">
+			<forward name="querypolicyfamily" path="/page/policy/query/querypolicyfamily.jsp" />
+		</action>
+		<action path="/page/policy/query/statPolicyFamily"
+			type="com.mingda.action.policy.query.StatPolicyFamilyAction">
+			<forward name="statpolicyfamily" path="/page/policy/query/statpolicyfamily.jsp" />
+		</action>
+		<action path="/page/policy/query/statPolicyFamilyInit"
+			type="com.mingda.action.policy.query.StatPolicyFamilyInitAction">
+			<forward name="statpolicyfamily" path="/page/policy/query/statpolicyfamily.jsp" />
+		</action>
+		<action path="/page/policy/query/noticePolicyQuery"
+			type="com.mingda.action.policy.query.NoticePolicyQueryAction">
+			<forward name="noticepolicyquery" path="/page/policy/query/noticepolicyquery.jsp" />
+		</action>
+		<action path="/page/policy/query/noticePolicyQueryInit"
+			type="com.mingda.action.policy.query.NoticePolicyQueryInitAction">
+			<forward name="noticepolicyquery" path="/page/policy/query/noticepolicyquery.jsp" />
+		</action>
+		<action path="/page/report/reportnational" type="com.mingda.action.report.ReportnationalAction">
+			<forward name="reportnational" path="/page/report/report_national.jsp" />
+			<forward name="jasperreprot" path="/page/report/jasperreprot.jsp" />
+		</action>
+		<action path="/page/report/report" type="com.mingda.action.report.ReportAction">
+			<forward name="reportnational" path="/page/report/report_national.jsp" />
+			<forward name="reportnational1" path="/page/report/nationalreport.jsp" />
+		</action>
+		<action path="/page/system/dictionary/dictinit"
+			type="com.mingda.action.system.dictionary.DictinitAction">
+			<forward name="dict" path="/page/system/dictionary/dict.jsp" />
+		</action>
+		<action path="/page/system/dictionary/dictsortsave"
+			type="com.mingda.action.system.dictionary.DictsortsaveAction" />
+		<action path="/page/policy/demurral/demurralqueryinit"
+			type="com.mingda.action.policy.demurral.DemurralqueryinitAction">
+			<forward name="demurralquery" path="/page/policy/demurral/demurralquery.jsp" />
+		</action>
+		<action path="/page/policy/demurral/demurralquery"
+			type="com.mingda.action.policy.demurral.DemurralqueryAction">
+			<forward name="demurralquery" path="/page/policy/demurral/demurralquery.jsp" />
+		</action>
+		<action path="/page/policy/demurral/demurralview"
+			type="com.mingda.action.policy.demurral.DemurralviewAction">
+			<forward name="demurralview" path="/page/policy/demurral/demurralview.jsp" />
+		</action>
+		<action path="/page/policy/demurral/demurralsave"
+			type="com.mingda.action.policy.demurral.DemurralsaveAction">
+			<forward name="demurralview" path="/page/policy/demurral/demurralview.jsp" />
+		</action>
+		<action path="/page/policy/demurral/demurraldel"
+			type="com.mingda.action.policy.demurral.DemurraldelAction">
+			<forward name="demurralview" path="/page/policy/demurral/demurralview.jsp" />
+		</action>
+		<action path="/page/info/neweditor/editormenu"
+			type="com.mingda.action.info.neweditor.EditormenuAction">
+			<forward name="editormenu" path="/page/info/neweditor/editormenu.jsp" />
+		</action>
+		<action path="/page/info/neweditor/familybaseinit"
+			type="com.mingda.action.info.neweditor.FamilybaseinitAction">
+			<forward name="familybase" path="/page/info/neweditor/familybase.jsp" />
+		</action>
+		<action path="/page/info/neweditor/familybasesave"
+			type="com.mingda.action.info.neweditor.FamilybasesaveAction" />
+		<action path="/page/info/neweditor/memberbaseinit"
+			type="com.mingda.action.info.neweditor.MemberbaseinitAction">
+			<forward name="memberbase" path="/page/info/neweditor/memberbase.jsp" />
+		</action>
+		<action path="/page/info/neweditor/memberbasesave"
+			type="com.mingda.action.info.neweditor.MemberbasesaveAction" />
+		<action path="/page/info/neweditor/incomeinit"
+			type="com.mingda.action.info.neweditor.IncomeinitAction">
+			<forward name="income" path="/page/info/neweditor/income.jsp" />
+		</action>
+		<action path="/page/info/neweditor/incomesave"
+			type="com.mingda.action.info.neweditor.IncomesaveAction">
+			<forward name="result" path="/page/common/result.jsp" />
+		</action>
+		<action path="/page/info/neweditor/assetinit" type="com.mingda.action.info.neweditor.AssetinitAction">
+			<forward name="asset" path="/page/info/neweditor/asset.jsp" />
+		</action>
+		<action path="/page/info/neweditor/assetsave" type="com.mingda.action.info.neweditor.AssetsaveAction" />
+		<action path="/page/info/neweditor/familyclass"
+			type="com.mingda.action.info.neweditor.FamilyclassAction">
+			<forward name="familysort" path="/page/info/neweditor/familysort.jsp" />
+		</action>
+		<action path="/page/organ/operpersoninit" type="com.mingda.action.organ.OperpersoninitAction">
+			<forward name="operperson" path="/page/organ/operperson.jsp" />
+		</action>
+		<action path="/page/organ/operpersonsave" type="com.mingda.action.organ.OperpersonsaveAction" />
+		<action path="/page/info/neweditor/createFamily"
+			type="com.mingda.action.info.neweditor.CreateFamilyAction">
+			<forward name="createfamily" path="/page/info/neweditor/createfamily.jsp" />
+		</action>
+		<action path="/page/info/neweditor/createFamilySave"
+			type="com.mingda.action.info.neweditor.CreateFamilySaveAction" />
+		<action path="/page/implemention/querypolicybymonth"
+			type="com.mingda.action.implemention.QuerypolicybymonthAction">
+			<forward name="querypolicybymonth" path="/page/implemention/querypolicybymonth.jsp" />
+		</action>
+		<action path="/page/policy/query/noticequeryinit"
+			type="com.mingda.action.policy.query.NoticequeryinitAction">
+			<forward name="noticequery" path="/page/policy/query/noticequery.jsp" />
+		</action>
+		<action path="/page/policy/query/noticequery" type="com.mingda.action.policy.query.NoticequeryAction">
+			<forward name="noticequery" path="/page/policy/query/noticequery.jsp" />
+		</action>
+		<action path="/page/info/neweditor/annexinit" type="com.mingda.action.info.neweditor.AnnexinitAction">
+			<forward name="annex" path="/page/info/neweditor/annex.jsp" />
+		</action>
+		<action path="/page/info/neweditor/annexsave" type="com.mingda.action.info.neweditor.AnnexsaveAction" />
+		<action path="/page/info/neweditor/annexbrowser"
+			type="com.mingda.action.info.neweditor.AnnexbrowserAction">
+			<forward name="annexbrowser" path="/page/info/neweditor/annexbrowser.jsp" />
+		</action>
+		<action path="/page/info/neweditor/removememberinit"
+			type="com.mingda.action.info.neweditor.RemovememberinitAction">
+			<forward name="removemember" path="/page/info/neweditor/removemember.jsp" />
+		</action>
+		<action path="/page/info/neweditor/removemember"
+			type="com.mingda.action.info.neweditor.RemovememberAction">
+			<forward name="result" path="/page/info/neweditor/result.jsp" />
+		</action>
+		<action path="/page/report/jasper" type="com.mingda.action.report.JasperAction" />
+		<action path="/page/report/rygc" type="com.mingda.action.report.RygcAction" />
+		<action path="/page/report/jasperinit" type="com.mingda.action.report.JasperInitAction">
+			<forward name="jasperreprot" path="/page/report/jasperreprot.jsp" />
+		</action>
+		<action path="/page/policy/account/batchinit" type="com.mingda.action.policy.account.BatchinitAction">
+			<forward name="batchinit" path="/page/policy/account/batchinit.jsp"></forward>
+		</action>
+		<action path="/page/policy/account/batch" type="com.mingda.action.policy.account.BatchAction">
+		</action>
+		<action path="/page/policy/account/batchdone" type="com.mingda.action.policy.account.BatchdoneAction">
+		</action>
+		<action path="/page/policy/account/batchcancelinit"
+			type="com.mingda.action.policy.account.BatchcancelinitAcion">
+			<forward name="batchcancel" path="/page/policy/account/batchcancel.jsp"></forward>
+		</action>
+		<action path="/page/policy/account/batchcancel"
+			type="com.mingda.action.policy.account.BatchcancelAction">
+		</action>
+		<action attribute="uploadpicForm" name="uploadpicForm"
+			path="/page/info/neweditor/uploadpicture" scope="request"
+			type="com.mingda.action.info.neweditor.UploadPicAction">
+			<forward name="pic" path="/page/info/neweditor/uploadpicture.jsp" />
+		</action>
+		<action path="/page/newapprove/baseapplyinit" scope="request"
+			type="com.mingda.action.newapprove.BaseApplyInitAction">			<forward name="baseapply" path="/page/newapprove/baseapply.jsp">
+			</forward>
+		</action>
+		<action path="/page/newapprove/baseapply" scope="request"
+			type="com.mingda.action.newapprove.BaseApplyAction">
+			<forward name="baseapplyview" path="/page/newapprove/baseapplyview.jsp">
+			</forward>
+		</action>
+		<action path="/page/newapprove/baseapplyqueryinit" scope="request"
+			type="com.mingda.action.newapprove.BaseApplyQueryInitAction">
+			<forward name="baseapplyquery" path="/page/newapprove/baseapplyquery.jsp">
+			</forward>
+		</action>
+		<action path="/page/newapprove/baseapplyquery" scope="request"
+			type="com.mingda.action.newapprove.BaseApplyQueryAction">
+			<forward name="baseapplyquery" path="/page/newapprove/baseapplyquery.jsp">
+			</forward>
+		</action>
+		<action path="/page/info/neweditor/mutilupload" scope="request"
+			type="com.mingda.action.info.neweditor.MutilUploadAction" attribute="mutilUploadForm"
+			name="mutilUploadForm">
+			<forward name="uploadfile" path="/page/info/neweditor/uploadfile.jsp"></forward>
+		</action>
+	</action-mappings>
+	<controller />
+	<message-resources parameter="com.mingda.ApplicationResources" />
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-parser-validate"
+			value="true" />
+	</plug-in>
+</struts-config>

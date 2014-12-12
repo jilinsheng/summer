@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="countryrygc" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="oid" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select org.orgname, inf.*
+  from sys_t_organization org,
+       (select substr(t.organization_id, 1, 6) as orgno,
+               sum(decode(sign(t.age - 17), 1, 0, 1)) as age1,
+               sum(decode(sign(t.age - 60),
+                          1,
+                          0,
+                          decode(sign(18 - t.age), 1, 0, 1))) as age2,
+               sum(decode(sign(61 - t.age), 1, 0, 1)) as age3,
+               sum(goucheng2) as goucheng2,
+               sum(goucheng3) as goucheng3,
+               sum(goucheng4) as goucheng4,
+               sum(goucheng5) as goucheng5,
+               sum(decode(sign(t.age - 60),
+                          1,
+                          0,
+                          decode(sign(18 - t.age), 1, 0, labour1))) as labour1,
+               sum(decode(sign(t.age - 60),
+                          1,
+                          0,
+                          decode(sign(18 - t.age), 1, 0, labour2))) as labour2,
+               sum(decode(sign(t.age - 60),
+                          1,
+                          0,
+                          decode(sign(18 - t.age), 1, 0, labour3))) as labour3
+          from countryrygc t
+         group by substr(t.organization_id, 1, 6)) inf
+ where inf.orgno = org.organization_id  and org.organization_id like  $P{oid}||'%'
+ order by org.organization_id]]>
+	</queryString>
+	<field name="ORGNAME" class="java.lang.String"/>
+	<field name="ORGNO" class="java.lang.String"/>
+	<field name="AGE1" class="java.math.BigDecimal"/>
+	<field name="AGE2" class="java.math.BigDecimal"/>
+	<field name="AGE3" class="java.math.BigDecimal"/>
+	<field name="GOUCHENG2" class="java.math.BigDecimal"/>
+	<field name="GOUCHENG3" class="java.math.BigDecimal"/>
+	<field name="GOUCHENG4" class="java.math.BigDecimal"/>
+	<field name="GOUCHENG5" class="java.math.BigDecimal"/>
+	<field name="LABOUR1" class="java.math.BigDecimal"/>
+	<field name="LABOUR2" class="java.math.BigDecimal"/>
+	<field name="LABOUR3" class="java.math.BigDecimal"/>
+	<sortField name="ORGNO"/>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="800" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="24"/>
+				</textElement>
+				<text><![CDATA[农村低保月份报表-2(成分构成)]]></text>
+			</staticText>
+			<textField pattern="yyyy年MM月dd日">
+				<reportElement x="700" y="36" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="652" y="36" width="48" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[报表日期:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="36" width="80" height="20"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[(单位：人)]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="476" y="21" width="72" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[残疾人员]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="740" y="21" width="60" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[丧失
+劳动能力]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="31" width="80" height="30"/>
+				<box leftPadding="15">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[地区]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="548" y="21" width="72" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[在校学生]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="21" width="60" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[0至17周岁]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="80" height="30"/>
+				<box rightPadding="15">
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[项目]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="21" width="60" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[完全
+劳动能力]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="21" width="72" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[优抚对象]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="21" width="60" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[60周岁以上]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="1" width="180" height="20"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[年龄构成]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="21" width="72" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[患病人员]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="620" y="1" width="180" height="20"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[劳动能力构成(劳动年龄内)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="1" width="360" height="20"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[身份构成]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="21" width="60" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[18至60周岁]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="1" width="80" height="60"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="680" y="21" width="60" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[部分
+劳动能力]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="21" width="72" height="40"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[五保户]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="20"/>
+				<box>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ORGNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="0" width="72" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{GOUCHENG2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="0" width="72" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{GOUCHENG3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="548" y="0" width="72" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{GOUCHENG5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="72" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{GOUCHENG4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="0" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{LABOUR1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="0" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{LABOUR2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="740" y="0" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{LABOUR3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{AGE1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{AGE2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{AGE3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="260" y="0" width="72" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

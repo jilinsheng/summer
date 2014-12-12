@@ -1,0 +1,89 @@
+a {
+	text-decoration: none;
+}
+
+a,a:visited {
+	color: #000;
+	background: inherit;
+	cursor: hand;
+}
+
+body {
+	margin: 0;
+	padding: 0px;
+	font: 12px tahoma, ËÎÌו, sans-serif;
+}
+
+dt {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0 0 0 15px;
+}
+
+dd {
+	margin: 0 0 0 15px;
+}
+
+p {
+	margin: 0;
+	padding: 0 0 0 18px;
+}
+
+p a,p a:visited {
+	color: #00f;
+	background: inherit;
+}
+
+.TreeMenu img.s {
+	cursor: hand;
+	vertical-align: middle;
+}
+
+.TreeMenu ul {
+	padding: 0;
+}
+
+.TreeMenu li {
+	list-style: none;
+	padding: 0;
+}
+
+.Closed ul {
+	display: none;
+}
+
+.Child img.s {
+	background: none;
+	cursor: default;
+}
+
+#CategoryTree ul {
+	margin: 0 0 0 20px;
+}
+
+#CategoryTree img.s {
+	width: 34px;
+	height: 18px;
+}
+
+#CategoryTree .Opened img.s {
+	background: url(/db/page/images/tree/opened.gif) no-repeat 0 1px;
+}
+
+#CategoryTree .Closed img.s {
+	background: url(/db/page/images/tree/closed.gif) no-repeat 0 1px;
+}
+
+#CategoryTree .Child img.s {
+	background: url(/db/page/images/tree/child.gif) no-repeat 13px 2px;
+}
+
+#CategoryTree {
+	float: left;
+	width: 100%;
+	border: 1px solid #99BEEF;
+	background: #D2E4FC;
+	color: inherit;
+	margin: 1px;
+	padding: 1px;
+}

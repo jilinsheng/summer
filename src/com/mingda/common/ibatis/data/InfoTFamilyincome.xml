@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="InfoTFamilyincome" >
+  <resultMap id="InfoTFamilyincomeResult" class="com.mingda.common.ibatis.data.InfoTFamilyincome" >
+     <result column="FAMILYINCOME_ID" property="familyincomeId"/>
+    <result column="FAMILY_ID" property="familyId"/>
+    <result column="INCOME1" property="income1"/>
+    <result column="INCOME2" property="income2"/>
+    <result column="INCOME3" property="income3"/>
+    <result column="INCOME4" property="income4"/>
+    <result column="INCOME5" property="income5"/>
+    <result column="ALLINCOME" property="allincome"/>
+    <result column="AVGINCOME" property="avgincome" />
+  </resultMap>
+    <select id="selectIncomeByPrimaryKey" resultMap="InfoTFamilyincomeResult" parameterClass="com.mingda.common.ibatis.data.InfoTFamilyincome" >
+    select FAMILYINCOME_ID, FAMILY_ID, INCOME1, INCOME2, INCOME3, INCOME4, INCOME5, ALLINCOME,
+      AVGINCOME
+    from INFO_T_FAMILYINCOME
+    where FAMILYINCOME_ID = #familyincomeId#
+  </select>
+    <select id="selectIncomeByFamilyId" resultMap="InfoTFamilyincomeResult" parameterClass="com.mingda.common.ibatis.data.InfoTFamilyincome" >
+    select FAMILYINCOME_ID, FAMILY_ID, INCOME1, INCOME2, INCOME3, INCOME4, INCOME5, ALLINCOME,
+      AVGINCOME
+    from INFO_T_FAMILYINCOME
+    where FAMILY_ID = #familyId#
+  </select>
+  <insert id="insertFamilyincome" parameterClass="com.mingda.common.ibatis.data.InfoTFamilyincome" >
+  <!--   <selectKey resultClass="java.lang.Integer" keyProperty="familyincomeId" type="pre">
+			SELECT hibernate_sequence.nextval AS familyincomeId FROM DUAL
+		</selectKey>-->
+   insert into INFO_T_FAMILYINCOME (FAMILYINCOME_ID, FAMILY_ID, INCOME1, INCOME2, INCOME3,
+      INCOME4, INCOME5, ALLINCOME, AVGINCOME)
+    values (hibernate_sequence.nextval, #familyId:DECIMAL#, #income1:DECIMAL#, #income2:DECIMAL#,
+      #income3:DECIMAL#, #income4:DECIMAL#, #income5:DECIMAL#, #allincome:DECIMAL#,
+      #avgincome:DECIMAL#)
+  </insert>
+  <update id="updateFamilyincomeByPrimaryKey" parameterClass="com.mingda.common.ibatis.data.InfoTFamilyincome" >
+    update INFO_T_FAMILYINCOME
+    set FAMILY_ID = #familyId#,
+      INCOME1 = #income1#,
+      INCOME2 = #income2#,
+      INCOME3 = #income3#,
+      INCOME4 = #income4#,
+      INCOME5 = #income5#,
+      ALLINCOME = #allincome#,
+      AVGINCOME = #avgincome#
+    where FAMILYINCOME_ID = #familyincomeId#
+  </update>
+  <update id="updateFamilyincomeByPrimaryKeySelective" parameterClass="com.mingda.common.ibatis.data.InfoTFamilyincome" >
+    update INFO_T_FAMILYINCOME
+    <dynamic prepend="set" >
+      <isNotNull prepend="," property="familyId" >
+        FAMILY_ID = #familyId#
+      </isNotNull>
+      <isNotNull prepend="," property="income1" >
+        INCOME1 = #income1#
+      </isNotNull>
+      <isNotNull prepend="," property="income2" >
+        INCOME2 = #income2#
+      </isNotNull>
+      <isNotNull prepend="," property="income3" >
+        INCOME3 = #income3#
+      </isNotNull>
+      <isNotNull prepend="," property="income4" >
+        INCOME4 = #income4#
+      </isNotNull>
+      <isNotNull prepend="," property="income5" >
+        INCOME5 = #income5#
+      </isNotNull>
+      <isNotNull prepend="," property="allincome" >
+        ALLINCOME = #allincome#
+      </isNotNull>
+      <isNotNull prepend="," property="avgincome" >
+        AVGINCOME = #avgincome#
+      </isNotNull>
+    </dynamic>
+    where FAMILYINCOME_ID = #familyincomeId#
+  </update>
+</sqlMap>

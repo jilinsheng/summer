@@ -1,0 +1,197 @@
+/* CSS Document */
+body {
+MARGIN: 0px; 
+PADDING: 0px;
+background: #DEEFFF;
+font-family:"宋体";
+font-size:12px;
+}
+.btn { 
+	BORDER-RIGHT: #002D96 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: 
+    #002D96 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 12px; FILTER: 
+    progid:DXImageTransform.Microsoft.Gradient(GradientType=0, 
+    StartColorStr=#FFFFFF, EndColorStr=#9DBCEA); BORDER-LEFT: #002D96 
+    1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 0px; PADDING-BOTTOM: 0px;
+    BORDER-BOTTOM: #002D96 1px solid
+     }
+#leftup{ 
+POSITION: absolute;
+LEFT:2px;
+top:0px;
+WIDTH:150px;
+height:120px; 
+MARGIN: 0px; 
+PADDING: 0px; 
+BACKGROUND:#FFFFFF; 
+} 
+#leftdown{
+POSITION: absolute;
+LEFT:2px;
+top:122px;
+WIDTH:150px;
+height:126px; 
+MARGIN: 0px; 
+PADDING: 0px; 
+BACKGROUND:#FFFFFF;
+OVERFLOW-Y:scroll;
+}
+/**/ 
+#middle{
+POSITION: absolute; 
+LEFT:154px;
+TOP:0px;
+WIDTH:300px;
+height:210px; 
+MARGIN: 0px; 
+PADDING: 0px; 
+BACKGROUND:#FFFFFF;
+OVERFLOW-Y: scroll;
+}
+#butzone{
+POSITION: absolute; 
+LEFT:154px;
+top:212px; 
+WIDTH:300px;
+height:36px; 
+MARGIN: 0px; 
+PADDING: 0px; 
+BACKGROUND:#FFFFFF;
+} 
+#right{
+POSITION: absolute;
+LEFT:456px;
+TOP:0px;
+height:248px;
+MARGIN: 0px; 
+PADDING: 0px; 
+BACKGROUND:#FFFFFF;
+}
+#bottomline{
+POSITION: absolute;
+TOP:248px;
+height:2px;
+MARGIN: 0px; 
+PADDING: 0px; 
+BACKGROUND:#006FC0;
+width:100%;
+}
+#divResult {
+	width: 200px;
+	position:absolute;
+	left: 200px;
+	top: 30px;
+	height: 95px;
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF0000;
+	text-align: center;
+	filter:alpha(opacity=85);
+	background-color:#FFFFFF;
+}
+/**定义第一种表格样式，查询条件中经常用到**/
+.table2 {
+	border-collapse: collapse;
+}
+
+.table2 td {
+	height: 25px;
+	border: 0px;
+	font-size: 12px;
+}
+
+.table2 th {
+	width: 100px;
+	height: 25px;
+	border: 0px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 12px;
+	color: #003366;
+}
+
+/**定义第三种表格样式，信息显示中经常用到**/
+.table3 {
+	border-collapse: collapse;
+	border: 1px solid #999;
+	margin: 0px;
+	padding: 3px;
+	word-break: break-all;
+}
+
+.table3 td {
+	height: 23px;
+	border: 0px;
+	font-size: 12px;
+	background-color: #FFF;
+}
+
+.table3 th {
+	height: 23px;
+	border: 0px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+	background-color: #FFF;
+}
+
+/**定义第二种表格样式，查询结果中经常用到**/
+.table1 {
+	border-collapse: collapse;
+	border: 1px solid #999;
+	border-width: 1px 0 0 1px;
+	margin: 2px 0 2px 0;
+	text-align: center;
+}
+
+.table1 td {
+	height: 23px;
+	border: 1px solid #999;
+	border-width: 0 1px 1px 0;
+	margin: 2px 0 2px 0;
+	font-size: 12px;
+	background-color: #FFF;
+	text-align: center;
+}
+
+.table1 th {
+	height: 23px;
+	border: 1px solid #999;
+	border-width: 0 1px 1px 0;
+	margin: 2px 0 2px 0;
+	text-align: center;
+	font-size: 12px;
+	text-align: center;
+	font-weight: 600;
+	background-color: #C9DDFE;
+}
+.table4 {
+	border-collapse: collapse;
+	border: 1px solid #999;
+	border-width: 1px 0 0 1px;
+	margin: 2px 0 2px 0;
+	text-align: center;
+}
+
+.table4 td {
+	height: 23px;
+	border: 1px solid #999;
+	border-width: 0 1px 1px 0;
+	margin: 2px 0 2px 0;
+	font-size: 12px;
+	background-color: #FFF;
+	text-align: center;
+}
+
+.table4 th {
+	height: 23px;
+	width:90px;
+	border: 1px solid #999;
+	border-width: 0 1px 1px 0;
+	margin: 2px 0 2px 0;
+	text-align: center;
+	font-size: 12px;
+	text-align: center;
+	font-weight: 600;
+	background-color: #6BA6FF;
+}

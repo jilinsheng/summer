@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<settings useStatementNamespaces="true"/>
+	<!--
+		Configure a built-in transaction manager. If you're using an app
+		server, you probably want to use its transaction manager and a managed
+		datasource
+		jdbc:oracle:thin:@(description=(ADDRESS_LIST=(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.33)(PORT = 1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.34)(PORT = 1521))(load_balance=yes)(failover=yes))(connect_data=(service_name= ncdb)(instance_name=ncdb1)(instance_name=ncdb2)))
+	-->
+	<transactionManager type="JDBC" commitRequired="false">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="oracle.jdbc.driver.OracleDriver" />
+			<!--<property name="JDBC.ConnectionURL" value="jdbc:oracle:thin:@(description=(ADDRESS_LIST=(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.33)(PORT = 1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.34)(PORT = 1521))(failover=yes))(connect_data=(service_name= ncdb)))"/> 
+			--><!-- <property name="JDBC.ConnectionURL" value="jdbc:oracle:thin:@192.168.1.230:1521:orcl"/>-->
+			<!--<property name="JDBC.ConnectionURL" value="jdbc:oracle:thin:@10.1.0.31:1521:ncdb1"/>
+			jdbc:oracle:thin:@(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.31)(PORT = 1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.32)(PORT = 1521))(LOAD_BALANCE = yes)(FAILOVER = ON)(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = db.domain)(FAILOVER_MODE=(TYPE = SELECT)(METHOD = BASIC)(RETIRES = 20)(DELAY = 15))))
+			-->
+			<property name="JDBC.ConnectionURL" value="jdbc:oracle:thin:@(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.31)(PORT = 1521))(ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.0.32)(PORT = 1521))(LOAD_BALANCE = yes)(FAILOVER = ON)(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = ncdb)(FAILOVER_MODE=(TYPE = SELECT)(METHOD = BASIC)(RETIRES = 20)(DELAY = 15))))"/>
+			<property name="JDBC.Username" value="summer" />
+			<property name="JDBC.Password" value="summer" />
+			<property name="JDBC.DefaultAutoCommit" value="true" />
+			<property name="Pool.MaximumActiveConnections" value="50" />
+			<property name="Pool.MaximumIdleConnections" value="10" />
+			<property name="Pool.MaximumCheckoutTime" value="120000" />
+			<property name="Pool.TimeToWait" value="500" />
+			<property name="Pool.PingQuery" value="select 1 from dual" />
+			<property name="Pool.PingEnabled" value="false" />
+			<property name="Pool.PingConnectionsOlderThan" value="1" />
+			<property name="Pool.PingConnectionsNotUsedFor" value="1" />
+		</dataSource>
+	</transactionManager>
+	<sqlMap resource="com/mingda/common/ibatis/data/InfoTFamily.xml" />
+	<sqlMap resource="com/mingda/common/ibatis/data/InfoTMember.xml" />
+	<sqlMap resource="com/mingda/common/ibatis/data/InfoTFamilyincome.xml" />
+	<sqlMap resource="com/mingda/common/ibatis/data/InfoTPayout.xml" />
+	<sqlMap resource="com/mingda/common/ibatis/data/InfoTAsset.xml" />
+	<sqlMap resource="com/mingda/common/ibatis/data/InfoTAnnex.xml" />
+	<sqlMap resource="com/mingda/common/ibatis/data/SYS_T_INFOLOG_SqlMap.xml" />
+</sqlMapConfig>

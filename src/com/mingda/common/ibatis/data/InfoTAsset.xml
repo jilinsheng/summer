@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="InfoTAsset">
+	<resultMap id="InfoTAssetResult" class="com.mingda.common.ibatis.data.InfoTAsset">
+		<result column="ASSET_ID" property="assetId" jdbcType="DECIMAL" />
+		<result column="FAMILY_ID" property="familyId" jdbcType="DECIMAL" />
+		<result column="FARMLAND" property="farmland" jdbcType="DECIMAL" />
+		<result column="PADDYFIELD" property="paddyfield" jdbcType="DECIMAL" />
+		<result column="GLEBE" property="glebe" jdbcType="DECIMAL" />
+		<result column="OWNERHOUSE" property="ownerhouse" jdbcType="DECIMAL" />
+		<result column="ROOMCNT" property="roomcnt" jdbcType="DECIMAL" />
+		<result column="BUILDAREA" property="buildarea" jdbcType="DECIMAL" />
+		<result column="STRUCT" property="struct" jdbcType="DECIMAL" />
+		<result column="REPOSE" property="repose" jdbcType="VARCHAR" />
+		<result column="OTHER" property="other" jdbcType="VARCHAR" />
+		<result column="PRODUCERGOODS" property="producergoods"
+			jdbcType="DECIMAL" />
+		<result column="ANIMAL" property="animal" jdbcType="DECIMAL" />
+		<result column="FARMMACHINE" property="farmmachine" jdbcType="DECIMAL" />
+		<result property="estimation" column="ESTIMATION" jdbcType="DECIMAL"/>
+	</resultMap>
+	<select id="selectAssetByPrimaryKey" resultMap="InfoTAssetResult"
+		parameterClass="com.mingda.common.ibatis.data.InfoTAsset">
+		select ASSET_ID, FAMILY_ID, FARMLAND, PADDYFIELD, GLEBE, OWNERHOUSE,
+		ROOMCNT, BUILDAREA, STRUCT,
+		REPOSE, OTHER, PRODUCERGOODS, ANIMAL, FARMMACHINE ,ESTIMATION
+		from INFO_T_ASSET
+		where ASSET_ID = #assetId:DECIMAL#
+	</select>
+		<select id="selectAssetByFamilyId" resultMap="InfoTAssetResult"
+		parameterClass="com.mingda.common.ibatis.data.InfoTAsset">
+		select ASSET_ID, FAMILY_ID, FARMLAND, PADDYFIELD, GLEBE, OWNERHOUSE,
+		ROOMCNT, BUILDAREA, STRUCT,
+		REPOSE, OTHER, PRODUCERGOODS, ANIMAL, FARMMACHINE ,ESTIMATION
+		from INFO_T_ASSET
+		where FAMILY_ID = #familyId:DECIMAL#
+	</select>
+	<delete id="deleteAssetByPrimaryKey" parameterClass="com.mingda.common.ibatis.data.InfoTAsset">
+		delete from INFO_T_ASSET
+		where ASSET_ID = #assetId:DECIMAL#
+	</delete>
+	<insert id="insertAsset" parameterClass="com.mingda.common.ibatis.data.InfoTAsset">
+		insert into INFO_T_ASSET (ASSET_ID, FAMILY_ID, FARMLAND,
+		PADDYFIELD, GLEBE, OWNERHOUSE,
+		ROOMCNT, BUILDAREA, STRUCT, REPOSE, OTHER, PRODUCERGOODS, ANIMAL, FARMMACHINE ,ESTIMATION)
+		values (#assetId:DECIMAL#, #familyId:DECIMAL#, #farmland:DECIMAL#,
+		#paddyfield:DECIMAL#,
+		#glebe:DECIMAL#, #ownerhouse:DECIMAL#, #roomcnt:DECIMAL#, #buildarea:DECIMAL#,
+		#struct:DECIMAL#, #repose:VARCHAR#, #other:VARCHAR#,
+		#producergoods:DECIMAL#,
+		#animal:DECIMAL#, #farmmachine:DECIMAL# ,#estimation:DECIMAL#)
+	</insert>
+	<update id="updateAssetByPrimaryKey" parameterClass="com.mingda.common.ibatis.data.InfoTAsset">
+		update INFO_T_ASSET
+		set FAMILY_ID = #familyId:DECIMAL#,
+		FARMLAND = #farmland:DECIMAL#,
+		PADDYFIELD = #paddyfield:DECIMAL#,
+		GLEBE = #glebe:DECIMAL#,
+		OWNERHOUSE = #ownerhouse:DECIMAL#,
+		ROOMCNT = #roomcnt:DECIMAL#,
+		BUILDAREA = #buildarea:DECIMAL#,
+		STRUCT = #struct:DECIMAL#,
+		REPOSE = #repose:VARCHAR#,
+		OTHER = #other:VARCHAR#,
+		PRODUCERGOODS = #producergoods:DECIMAL#,
+		ANIMAL = #animal:DECIMAL#,
+		FARMMACHINE = #farmmachine:DECIMAL#,
+		ESTIMATION=#estimation:DECIMAL#
+		where ASSET_ID = #assetId:DECIMAL#
+	</update>
+</sqlMap>
